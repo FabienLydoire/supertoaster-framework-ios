@@ -34,9 +34,12 @@ extension Array {
         return !isEmpty
     }
     
-    func sortedInverse() -> [Element] {
+    public func sortedInverse() -> [Element] {
         return (self as NSArray).sortedArray(using: [NSSortDescriptor(key: nil, ascending: false)]) as! Array
     }
     
+    public func randomItem() -> Element {
+        return self[Int(arc4random_uniform(UInt32(self.count)))]
+    }
 }
 
