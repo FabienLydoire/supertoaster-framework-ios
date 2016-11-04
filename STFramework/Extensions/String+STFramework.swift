@@ -34,7 +34,27 @@ extension String {
     }
     
     public func isEqualCaseInsensitiveWith(string: String) -> Bool {
-        return self.caseInsensitiveCompare(string) == ComparisonResult.orderedSame
+        return self.caseInsensitiveCompare(string) == .orderedSame
+    }
+    
+    public func isEmail() -> Bool {
+        return NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}").evaluate(with: self)
+    }
+    
+    public func isEmptyTrimmed() -> Bool {
+        return self.trim().isEmpty
+    }
+    
+    public func isNotEmptyTrimmed() -> Bool {
+        return !isEmptyTrimmed()
+    }
+    
+    public func contains(string: String) -> Bool {
+        return self.range(of: string) != nil
+    }
+    
+    public func containsCaseInsensitive(string: String) -> Bool {
+        return self.lowercased().range(of: string.lowercased()) != nil
     }
 }
 
