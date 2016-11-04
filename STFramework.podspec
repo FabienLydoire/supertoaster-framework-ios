@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.name         = "STFramework"
   s.version      = "0.0.1"
   s.summary      = "A collection of tools and helper classes for iOS projects"
-  s.description  = "A collection of tools and helper classes for iOS projects"
+  s.description  = "The Super Toaster Framework is a collection of tools and helper classes for iOS projects"
 
   s.homepage     = "https://github.com/supertoasteragency/supertoaster-framework-ios"
   s.license      = { :type => "MIT", :file => "LICENSE" }
