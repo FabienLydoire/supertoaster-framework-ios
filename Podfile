@@ -1,4 +1,4 @@
-platform :ios, '8.4'
+platform :ios, '8.0'
 
 target 'STFramework' do
   use_frameworks!

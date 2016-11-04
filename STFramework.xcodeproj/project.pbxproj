@@ -9,9 +9,38 @@
 /* Begin PBXBuildFile section */
 		1A311F73BA136366B2319D42 /* Pods_STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */; };
 		55CE6AE8DA582633929B67F4 /* Pods_STFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D40E9E73983981C186D299 /* Pods_STFrameworkTests.framework */; };
+		844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */; };
+		844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */; };
+		844DC4D01DCCD3650071B121 /* Int+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */; };
+		844DC4D21DCCD3750071B121 /* UIView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */; };
+		844DC4D41DCCD39F0071B121 /* FileManager+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */; };
+		844DC4EE1DCCD5270071B121 /* Array+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D51DCCD5270071B121 /* Array+STFramework.swift */; };
+		844DC4EF1DCCD5270071B121 /* NSError+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D61DCCD5270071B121 /* NSError+STFramework.swift */; };
+		844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D71DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift */; };
+		844DC4F11DCCD5270071B121 /* NSIndexPath+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D81DCCD5270071B121 /* NSIndexPath+STFramework.swift */; };
+		844DC4F21DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4D91DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift */; };
+		844DC4F31DCCD5270071B121 /* NSManagedObject+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */; };
+		844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */; };
+		844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */; };
+		844DC4F61DCCD5270071B121 /* NSPredicate+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */; };
+		844DC4F71DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */; };
+		844DC4F81DCCD5270071B121 /* UIBarButtonItem+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */; };
+		844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */; };
+		844DC4FA1DCCD5270071B121 /* UICollectionView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E11DCCD5270071B121 /* UICollectionView+STFramework.swift */; };
+		844DC4FB1DCCD5270071B121 /* UIColor+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E21DCCD5270071B121 /* UIColor+STFramework.swift */; };
+		844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E31DCCD5270071B121 /* UIDevice+STFramework.swift */; };
+		844DC4FD1DCCD5270071B121 /* UIImage+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E41DCCD5270071B121 /* UIImage+STFramework.swift */; };
+		844DC4FE1DCCD5270071B121 /* UIImageView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E51DCCD5270071B121 /* UIImageView+STFramework.swift */; };
+		844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E61DCCD5270071B121 /* UILabel+STFramework.swift */; };
+		844DC5001DCCD5270071B121 /* UIScreen+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E71DCCD5270071B121 /* UIScreen+STFramework.swift */; };
+		844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */; };
+		844DC5021DCCD5270071B121 /* UIStoryBoard+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */; };
+		844DC5031DCCD5270071B121 /* UITableView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */; };
+		844DC5041DCCD5270071B121 /* UITableViewCell+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */; };
+		844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */; };
+		844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */; };
 		847708641DCCA951000A44C7 /* STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8477085A1DCCA951000A44C7 /* STFramework.framework */; };
 		847708691DCCA951000A44C7 /* STFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847708681DCCA951000A44C7 /* STFrameworkTests.swift */; };
-		8477086B1DCCA951000A44C7 /* STFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8477085D1DCCA951000A44C7 /* STFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +57,37 @@
 		07ED39B409C3925A7E94AA76 /* Pods-STFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		50A0E1A841449F4E32E9CEF5 /* Pods-STFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D51DCCD5270071B121 /* Array+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D61DCCD5270071B121 /* NSError+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D71DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D81DCCD5270071B121 /* NSIndexPath+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4D91DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E11DCCD5270071B121 /* UICollectionView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E21DCCD5270071B121 /* UIColor+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E31DCCD5270071B121 /* UIDevice+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E41DCCD5270071B121 /* UIImage+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E51DCCD5270071B121 /* UIImageView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E61DCCD5270071B121 /* UILabel+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E71DCCD5270071B121 /* UIScreen+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+STFramework.swift"; sourceTree = "<group>"; };
+		844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+STFramework.swift"; sourceTree = "<group>"; };
 		8477085A1DCCA951000A44C7 /* STFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8477085D1DCCA951000A44C7 /* STFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STFramework.h; sourceTree = "<group>"; };
 		8477085E1DCCA951000A44C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847708631DCCA951000A44C7 /* STFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847708681DCCA951000A44C7 /* STFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STFrameworkTests.swift; sourceTree = "<group>"; };
@@ -80,6 +138,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		844DC4C61DCCCFE90071B121 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				844DC4D51DCCD5270071B121 /* Array+STFramework.swift */,
+				844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */,
+				844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */,
+				844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */,
+				844DC4D61DCCD5270071B121 /* NSError+STFramework.swift */,
+				844DC4D71DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift */,
+				844DC4D81DCCD5270071B121 /* NSIndexPath+STFramework.swift */,
+				844DC4D91DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift */,
+				844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */,
+				844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */,
+				844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */,
+				844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */,
+				844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */,
+				844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */,
+				844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */,
+				844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */,
+				844DC4E11DCCD5270071B121 /* UICollectionView+STFramework.swift */,
+				844DC4E21DCCD5270071B121 /* UIColor+STFramework.swift */,
+				844DC4E31DCCD5270071B121 /* UIDevice+STFramework.swift */,
+				844DC4E41DCCD5270071B121 /* UIImage+STFramework.swift */,
+				844DC4E51DCCD5270071B121 /* UIImageView+STFramework.swift */,
+				844DC4E61DCCD5270071B121 /* UILabel+STFramework.swift */,
+				844DC4E71DCCD5270071B121 /* UIScreen+STFramework.swift */,
+				844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */,
+				844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */,
+				844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */,
+				844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */,
+				844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */,
+				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
+				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		847708501DCCA951000A44C7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +198,7 @@
 		8477085C1DCCA951000A44C7 /* STFramework */ = {
 			isa = PBXGroup;
 			children = (
-				8477085D1DCCA951000A44C7 /* STFramework.h */,
+				844DC4C61DCCCFE90071B121 /* Extensions */,
 				8477085E1DCCA951000A44C7 /* Info.plist */,
 			);
 			path = STFramework;
@@ -125,7 +220,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8477086B1DCCA951000A44C7 /* STFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +279,7 @@
 				TargetAttributes = {
 					847708591DCCA951000A44C7 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					847708621DCCA951000A44C7 = {
@@ -241,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1F270A30904430DD05F988FF /* [CP] Copy Pods Resources */ = {
@@ -301,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -311,6 +406,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */,
+				844DC4FB1DCCD5270071B121 /* UIColor+STFramework.swift in Sources */,
+				844DC4FA1DCCD5270071B121 /* UICollectionView+STFramework.swift in Sources */,
+				844DC4D21DCCD3750071B121 /* UIView+STFramework.swift in Sources */,
+				844DC5041DCCD5270071B121 /* UITableViewCell+STFramework.swift in Sources */,
+				844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */,
+				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
+				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
+				844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */,
+				844DC4F61DCCD5270071B121 /* NSPredicate+STFramework.swift in Sources */,
+				844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */,
+				844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */,
+				844DC4F31DCCD5270071B121 /* NSManagedObject+STFramework.swift in Sources */,
+				844DC4FD1DCCD5270071B121 /* UIImage+STFramework.swift in Sources */,
+				844DC5001DCCD5270071B121 /* UIScreen+STFramework.swift in Sources */,
+				844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */,
+				844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */,
+				844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */,
+				844DC5031DCCD5270071B121 /* UITableView+STFramework.swift in Sources */,
+				844DC4FE1DCCD5270071B121 /* UIImageView+STFramework.swift in Sources */,
+				844DC4D01DCCD3650071B121 /* Int+STFramework.swift in Sources */,
+				844DC4EF1DCCD5270071B121 /* NSError+STFramework.swift in Sources */,
+				844DC5021DCCD5270071B121 /* UIStoryBoard+STFramework.swift in Sources */,
+				844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */,
+				844DC4D41DCCD39F0071B121 /* FileManager+STFramework.swift in Sources */,
+				844DC4F21DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift in Sources */,
+				844DC4F11DCCD5270071B121 /* NSIndexPath+STFramework.swift in Sources */,
+				844DC4F71DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift in Sources */,
+				844DC4F81DCCD5270071B121 /* UIBarButtonItem+STFramework.swift in Sources */,
+				844DC4EE1DCCD5270071B121 /* Array+STFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07ED39B409C3925A7E94AA76 /* Pods-STFramework.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -447,6 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.supertoaster.STFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -455,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0A22AA169621D6D93D4DAB5 /* Pods-STFramework.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -474,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50A0E1A841449F4E32E9CEF5 /* Pods-STFrameworkTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = STFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.supertoaster.STFrameworkTests;
@@ -486,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFC3BD5C68B8E5955437CA64 /* Pods-STFrameworkTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = STFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.supertoaster.STFrameworkTests;
@@ -513,6 +643,7 @@
 				847708701DCCA951000A44C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		847708711DCCA951000A44C7 /* Build configuration list for PBXNativeTarget "STFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +652,7 @@
 				847708731DCCA951000A44C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
