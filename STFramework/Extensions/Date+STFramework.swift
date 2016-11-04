@@ -1,5 +1,5 @@
 //
-//  Array+STFramework.swift
+//  Date+STFramework.swift
 //  STFramework - Super Toaster Framework
 //
 //  Created by Louis de Decker 
@@ -28,15 +28,7 @@
 
 import UIKit
 
-extension Array {
+extension Date {
     
-    public var isNotEmpty: Bool {
-        return !isEmpty
-    }
-    
-    func sortedInverse() -> [Element] {
-        return (self as NSArray).sortedArray(using: [NSSortDescriptor(key: nil, ascending: false)]) as! Array
-    }
     
 }
-

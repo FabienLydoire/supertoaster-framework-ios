@@ -46,7 +46,7 @@ extension String {
     }
     
     public var isNotEmpty: Bool {
-        return self.isEmpty
+        return !self.isEmpty
     }
     
     public var isEmptyTrimmed: Bool {

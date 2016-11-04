@@ -30,9 +30,9 @@ import STFramework
 
 @testable import STFramework
 
-class StringSTFrameworkTests: XCTestCase {
+class ExtensionsTests: XCTestCase {
     
-    func testStrings() {
+    func testString() {
         
         let string = " string "
         XCTAssert(string.trim().length == 6)
@@ -65,8 +65,16 @@ class StringSTFrameworkTests: XCTestCase {
         XCTAssert(String.UUIDString().isNotEmpty)
         XCTAssert(string.appendUUIDString().length > string.length)
         XCTAssert(String.UUIDGlobalString().isNotEmpty)
-        XCTAssert(string.UUIDGlobalString().length > string.length)
+        XCTAssert(string.appendUUIDGlobalString().length > string.length)
 
     }
     
+    func testArray() {
+        let array = ["c", "a", "b"]
+        XCTAssert(array.isNotEmpty)
+        XCTAssert(array.sortedInverse()[0] == "c")
+        
+        
+        
+    }
 }
