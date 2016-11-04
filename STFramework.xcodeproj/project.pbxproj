@@ -39,6 +39,7 @@
 		844DC5041DCCD5270071B121 /* UITableViewCell+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */; };
 		844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */; };
 		844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */; };
+		8457E8991DCCE59900F61021 /* Data+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457E8981DCCE59900F61021 /* Data+STFramework.swift */; };
 		847708641DCCA951000A44C7 /* STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8477085A1DCCA951000A44C7 /* STFramework.framework */; };
 		847708691DCCA951000A44C7 /* STFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847708681DCCA951000A44C7 /* STFrameworkTests.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+STFramework.swift"; sourceTree = "<group>"; };
+		8457E8981DCCE59900F61021 /* Data+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+STFramework.swift"; sourceTree = "<group>"; };
 		8477085A1DCCA951000A44C7 /* STFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477085E1DCCA951000A44C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847708631DCCA951000A44C7 /* STFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				844DC4D51DCCD5270071B121 /* Array+STFramework.swift */,
+				8457E8981DCCE59900F61021 /* Data+STFramework.swift */,
 				844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */,
 				844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */,
 				844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */,
@@ -421,6 +424,7 @@
 				844DC4F31DCCD5270071B121 /* NSManagedObject+STFramework.swift in Sources */,
 				844DC4FD1DCCD5270071B121 /* UIImage+STFramework.swift in Sources */,
 				844DC5001DCCD5270071B121 /* UIScreen+STFramework.swift in Sources */,
+				8457E8991DCCE59900F61021 /* Data+STFramework.swift in Sources */,
 				844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */,
 				844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */,
 				844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */,
