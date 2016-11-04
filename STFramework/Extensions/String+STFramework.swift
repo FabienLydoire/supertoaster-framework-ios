@@ -86,5 +86,24 @@ extension String {
             return String(self.characters[self.index(self.startIndex, offsetBy: index)])
         }
     }
+    
+    // returns uuid string with format "6E20B04C-11FF-4F1A-A239-BFF5DB17CAE5"
+    public static func UUIDString() -> String {
+        return NSUUID().uuidString
+    }
+    
+    public func appendUUIDString() -> String {
+        return "\(self)\(String.UUIDString())"
+    }
+    
+    // returns uuid string with format "A31B3789-95C2-4122-A251-28ED88E77967-58509-000033D2E963799"
+    public static func UUIDGlobalString() -> String {
+        return ProcessInfo().globallyUniqueString
+    }
+    
+    public func appendUUIDGlobalString() -> String {
+        return "\(self)\(String.UUIDGlobalString())"
+    }
+    
 }
 

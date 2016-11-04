@@ -60,6 +60,12 @@ class StringSTFrameworkTests: XCTestCase {
         
         XCTAssert(string.prependDate().isNotEmptyTrimmed)
         XCTAssert(string.prependDate(separator: "--").contains(string: "--"))
+        
+        
+        XCTAssert(String.UUIDString().isNotEmpty)
+        XCTAssert(string.appendUUIDString().length > string.length)
+        XCTAssert(String.UUIDGlobalString().isNotEmpty)
+        XCTAssert(string.UUIDGlobalString().length > string.length)
 
     }
     
