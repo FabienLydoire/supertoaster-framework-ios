@@ -29,6 +29,12 @@
 import UIKit
 
 extension String {
+    public func trim() -> String {
+        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
     
+    public func isEqualCaseInsensitiveWith(string: String) -> Bool {
+        return self.caseInsensitiveCompare(string) == ComparisonResult.orderedSame
+    }
 }
 
