@@ -37,16 +37,24 @@ extension String {
         return self.caseInsensitiveCompare(string) == .orderedSame
     }
     
-    public func isEmail() -> Bool {
+    public var isAnEmail: Bool {
         return NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}").evaluate(with: self)
     }
     
-    public func isEmptyTrimmed() -> Bool {
+    public var isNotAnEmail: Bool {
+        return !isAnEmail
+    }
+    
+    public var isNotEmpty: Bool {
+        return self.isEmpty
+    }
+    
+    public var isEmptyTrimmed: Bool {
         return self.trim().isEmpty
     }
     
-    public func isNotEmptyTrimmed() -> Bool {
-        return !isEmptyTrimmed()
+    public var isNotEmptyTrimmed: Bool {
+        return !isEmptyTrimmed
     }
     
     public func contains(string: String) -> Bool {
@@ -55,6 +63,28 @@ extension String {
     
     public func containsCaseInsensitive(string: String) -> Bool {
         return self.lowercased().range(of: string.lowercased()) != nil
+    }
+    
+    public func appendDate(separator: String? = nil) -> String {
+        let separatorString = separator ?? ""
+        return "\(self)\(separatorString)\(DateFormatter.string(fromDate: Date(), withFormat: "dd-MM-yy_HH-mm-ss"))"
+    }
+    
+    public func prependDate(separator: String? = nil) -> String {
+        let separatorString = separator ?? ""
+        return "\(DateFormatter.string(fromDate: Date(), withFormat: "dd-MM-yy_HH-mm-ss"))\(separatorString)\(self)"
+    }
+    
+    public var length: Int {        
+        return self.characters.count
+    }
+    
+    public func substringAt(index: Int) -> String? {
+        if index < 0 || index >= self.length {
+            return nil
+        } else {
+            return String(self.characters[self.index(self.startIndex, offsetBy: index)])
+        }
     }
 }
 

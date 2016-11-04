@@ -1,5 +1,5 @@
 //
-//  Data+STFramework.swift
+//  DateFormatter+STFramework.swift
 //  STFramework - Super Toaster Framework
 //
 //  Created by Louis de Decker 
@@ -28,8 +28,12 @@
 
 import UIKit
 
-import Security
-
-extension Data {
-     
+extension DateFormatter {
+    
+    public static func string(fromDate: Date, withFormat: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = withFormat
+        return dateFormatter.string(from: Date())
+    }
+    
 }

@@ -1,5 +1,4 @@
 //
-//  Data+STFramework.swift
 //  STFramework - Super Toaster Framework
 //
 //  Created by Louis de Decker 
@@ -26,10 +25,42 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import UIKit
+import XCTest
+import STFramework
 
-import Security
+@testable import STFramework
 
-extension Data {
-     
+class StringSTFrameworkTests: XCTestCase {
+    
+    func testStrings() {
+        
+        let string = " string "
+        XCTAssert(string.trim().length == 6)
+        XCTAssert(string.trim().length == 6)
+
+        XCTAssertFalse("string" == "String")
+        XCTAssert("string".isEqualCaseInsensitiveWith(string: "String"))
+
+        XCTAssert("test@domain.com".isAnEmail)
+        XCTAssertFalse("test@domain".isAnEmail)
+        
+        XCTAssert("test@domain".isNotAnEmail)
+        XCTAssertFalse("test@domain.com".isNotAnEmail)
+        
+        
+        XCTAssert(" ".isEmptyTrimmed)
+        XCTAssert(" a".isNotEmptyTrimmed)
+
+        XCTAssert(string.contains("ing"))
+        XCTAssertFalse(string.contains("inG"))
+        XCTAssert(string.containsCaseInsensitive(string: "inG"))
+ 
+        XCTAssert(string.appendDate().isNotEmptyTrimmed)
+        XCTAssert(string.appendDate(separator: "--").contains(string: "--"))
+        
+        XCTAssert(string.prependDate().isNotEmptyTrimmed)
+        XCTAssert(string.prependDate(separator: "--").contains(string: "--"))
+
+    }
+    
 }
