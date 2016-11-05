@@ -31,5 +31,8 @@ import UIKit
 import Security
 
 extension Data {
-     
+    
+    func stringUsingUTF8() -> String? {
+        return String(data: self, encoding: .utf8)
+    }
 }

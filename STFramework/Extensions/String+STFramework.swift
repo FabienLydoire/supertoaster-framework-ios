@@ -105,5 +105,9 @@ extension String {
         return "\(self)\(String.UUIDGlobalString())"
     }
     
+    func dataUsingUTF8() -> Data? {
+        return self.data(using: .utf8)
+    }
+    
 }
 

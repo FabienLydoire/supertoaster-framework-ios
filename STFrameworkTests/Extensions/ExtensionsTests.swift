@@ -72,9 +72,18 @@ class ExtensionsTests: XCTestCase {
     func testArray() {
         let array = ["c", "a", "b"]
         XCTAssert(array.isNotEmpty)
-        XCTAssert(array.sortedInverse()[0] == "c")
+        XCTAssert(array.sortedInverse()[0] == "c") 
         
-        
+    }
+    
+    func testData() {
+        let string = "string"
+        if let dataFromString = string.dataUsingUTF8() {
+            XCTAssertNotNil(dataFromString)
+            if let stringFromData = dataFromString.stringUsingUTF8() {
+                XCTAssertNotNil(stringFromData)
+            }
+        }
         
     }
 }
