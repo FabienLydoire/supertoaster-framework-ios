@@ -100,12 +100,12 @@ extension UIView {
     
     public func layoutConstraintSet(width: CGFloat, height: CGFloat) {
         layoutConstraintSet(width: width)
-        layoutConstraintSet(width: height)
+        layoutConstraintSet(height: height)
     }
     
     public func layoutConstraintSet(size: CGSize) {
         layoutConstraintSet(width: size.width)
-        layoutConstraintSet(width: size.height)
+        layoutConstraintSet(height: size.height)
     }
     
     // MARK: Alignment
