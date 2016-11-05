@@ -29,6 +29,11 @@
 import UIKit
 
 extension String {
+    
+    public var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
     public func trim() -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
