@@ -67,12 +67,12 @@ extension String {
     
     public func appendDate(separator: String? = nil) -> String {
         let separatorString = separator ?? ""
-        return "\(self)\(separatorString)\(DateFormatter.string(fromDate: Date(), withFormat: "dd-MM-yy_HH-mm-ss"))"
+        return "\(self)\(separatorString)\(Date().string(withDateFormatType: .sqlDateFormatDashed))"
     }
     
     public func prependDate(separator: String? = nil) -> String {
         let separatorString = separator ?? ""
-        return "\(DateFormatter.string(fromDate: Date(), withFormat: "dd-MM-yy_HH-mm-ss"))\(separatorString)\(self)"
+        return "\(Date().string(withDateFormatType: .sqlDateFormatDashed))\(separatorString)\(self)"
     }
     
     public var length: Int {        

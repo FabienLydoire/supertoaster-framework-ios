@@ -99,6 +99,12 @@ class ExtensionsTests: XCTestCase {
         XCTAssertNotNil(Date().deviceDate)
     }
     
+    func testDateFormatter() {
+        XCTAssertNotNil(DateFormatter.sharedInstance)
+        XCTAssertNotNil(DateFormatter.sharedInstance(withDateFormat: DateFormatType.dayMonthYear.rawValue))
+        XCTAssertNotNil(DateFormatter.sharedInstance(withDateFormatType: .dayMonthYear))
+    }
+    
     func testInt() {
         let seconds = 59+1+3600+1
         XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .hoursMinutesSeconds) == "01:01:01")

@@ -28,16 +28,18 @@
 
 import UIKit
 
-extension Date {
+public enum DateFormatType: String {
+    case spacing = " "
+    case dayMonthYearHourMinuteSecond = "dd/MM/yyyy HH:mm:ss"
+    case dayMonthYear = "dd/MM/yyyy"
+    case hourMinuteSecond = "HH:mm:ss"
+    case sqlDate = "yyyy-MM-dd"
+    case sqlDateFormat = "yyyy-MM-dd HH:mm:ss"
+    case sqlDateFormatDashed = "yyyy-MM-dd-HH-mm-ss"
     
-    public enum DateFormatType: String {
-        case spacing = " "
-        case dayMonthYearHourMinuteSecond = "dd/MM/yyyy HH:mm:ss"
-        case dayMonthYear = "dd/MM/yyyy"
-        case hourMinuteSecond = "HH:mm:ss"
-        case sqlDate = "yyyy-MM-dd"
-        case sqlDateFormat = "yyyy-MM-dd HH:mm:ss"
-    }
+}
+
+extension Date {
     
     public static var unixTimeStamp: String {
         return "\(Int(Date().timeIntervalSince1970))"

@@ -28,12 +28,20 @@
 
 import UIKit
 
+
+
 extension DateFormatter {
     
-    public static func string(fromDate: Date, withFormat: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = withFormat
-        return dateFormatter.string(from: Date())
+    // for performance issues, because initializing the DateFormatter takes ressources, you might want a sharedInstance
+    public static let sharedInstance = DateFormatter()
+    
+    public static func sharedInstance(withDateFormat dateFormat: String) -> DateFormatter {
+        DateFormatter.sharedInstance.dateFormat = dateFormat
+        return DateFormatter.sharedInstance
+    }
+    
+    public static func sharedInstance(withDateFormatType dateFormatType: DateFormatType) -> DateFormatter {
+        return DateFormatter.sharedInstance(withDateFormat: dateFormatType.rawValue)
     }
     
 }
