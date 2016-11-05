@@ -30,5 +30,28 @@ import UIKit
 
 extension Int {
     
+    public enum SecondsFormatterType {
+        case hoursMinutesSeconds, hoursMinutes, minutesSeconds
+    }
+    
+    public func secondsFormatString(withSecondsFormatterType formatterType: SecondsFormatterType? = nil) -> String {
+        let seconds = self % 60
+        let minutes = (self / 60) % 60;
+        let hours = self / 3600
+        
+        var formatterTypeUnwrapped: SecondsFormatterType = .hoursMinutesSeconds
+        if let formatterType = formatterType {
+            formatterTypeUnwrapped = formatterType
+        }
+        switch formatterTypeUnwrapped {
+        case .hoursMinutesSeconds:
+            return String(format:"%02d:%02d:%02d", hours, minutes, seconds)
+        case .hoursMinutes:
+            return String(format:"%02d:%02d", hours, minutes)
+        case .minutesSeconds:
+            return String(format:"%02d:%02d", minutes, seconds)
+        }
+    }
+
 }
 

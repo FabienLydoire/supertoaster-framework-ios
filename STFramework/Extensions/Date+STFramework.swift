@@ -30,5 +30,65 @@ import UIKit
 
 extension Date {
     
+    public enum DateFormatType: String {
+        case spacing = " "
+        case dayMonthYearHourMinuteSecond = "dd/MM/yyyy HH:mm:ss"
+        case dayMonthYear = "dd/MM/yyyy"
+        case hourMinuteSecond = "HH:mm:ss"
+        case sqlDate = "yyyy-MM-dd"
+        case sqlDateFormat = "yyyy-MM-dd HH:mm:ss"
+    }
+    
+    public static var unixTimeStamp: String {
+        return "\(Int(Date().timeIntervalSince1970))"
+    }
+    
+    public func string(withDateFormatType formatTypes: [DateFormatType]) -> String {
+        var formatString = ""
+        for formatType in formatTypes {
+            formatString += formatType.rawValue
+        }
+        return string(withStringFormat: formatString)
+    }
+    
+    public func string(withDateFormatType formatType: DateFormatType) -> String {
+        return string(withStringFormat: formatType.rawValue)
+    }
+    
+    public func string(withStringFormat format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+    
+    public static var timestamp: String {
+        let dateString = Date().string(withStringFormat: "yyyy-MM-dd_HH-mm-ss_SSS")
+        let randomValue = arc4random_uniform(10000)
+        let uniqueString = String(format: "%@_%04d", dateString, randomValue)
+        return uniqueString
+    }
+    
+    // MARK: TimeZone related
+    public var gmt0Date: Date {
+        let timeZone = TimeZone.current
+        let secondsFromGMT = -timeZone.secondsFromGMT(for: self)
+        let gmt0Date = Date(timeInterval: TimeInterval(secondsFromGMT), since: self)
+        return gmt0Date
+    }
+    
+    public static var gmt0Date: Date {
+        return Date().gmt0Date
+    }
+    
+    public var deviceDate: Date {
+        let timeZone = TimeZone.current
+        let secondsFromGMT = timeZone.secondsFromGMT(for: self)
+        let gmt0Date = Date(timeInterval: TimeInterval(secondsFromGMT), since: self)
+        return gmt0Date
+    }
+    
+    public static var deviceDate: Date {
+        return Date().deviceDate
+    }   
     
 }

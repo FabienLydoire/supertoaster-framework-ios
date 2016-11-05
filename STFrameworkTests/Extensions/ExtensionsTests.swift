@@ -84,6 +84,26 @@ class ExtensionsTests: XCTestCase {
                 XCTAssertNotNil(stringFromData)
             }
         }
+    }
+    
+    func testDate() {
+        XCTAssertTrue(Date().string(withDateFormatType: [.dayMonthYear, .spacing, .dayMonthYear]).isNotEmpty)
         
+        XCTAssertTrue(Date.unixTimeStamp.isNotEmpty)
+        XCTAssertTrue(Date.timestamp.isNotEmpty)
+        
+        XCTAssertNotNil(Date.gmt0Date)
+        XCTAssertNotNil(Date().gmt0Date)
+        
+        XCTAssertNotNil(Date.deviceDate)
+        XCTAssertNotNil(Date().deviceDate)
+    }
+    
+    func testInt() {
+        let seconds = 59+1+3600+1
+        XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .hoursMinutesSeconds) == "01:01:01")
+        XCTAssertTrue(seconds.secondsFormatString() == "01:01:01")
+        XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .hoursMinutes) == "01:01")
+        XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .minutesSeconds) == "01:01")
     }
 }
