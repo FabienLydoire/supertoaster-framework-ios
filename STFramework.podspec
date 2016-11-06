@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STFramework"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A collection of tools and helper classes for iOS projects"
   s.description  = "The Super Toaster Framework is a collection of tools and helper classes for iOS projects"
 
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/supertoasteragency/supertoaster-framework-ios.git", :tag => "#{s.version}" }
   s.source_files  = "STFramework/**/*.{swift}"
 #s.resources = "STFramework/**/*.{png,jpeg,jpg,storyboard,xib}"
-  s.requires_arc = true
+#s.requires_arc = true
   s.framework = "UIKit"
 end
