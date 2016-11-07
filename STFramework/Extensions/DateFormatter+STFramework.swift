@@ -29,8 +29,6 @@
 
 import UIKit
 
-
-
 extension DateFormatter {
     
     // for performance issues, because initializing the DateFormatter takes ressources, you might want a sharedInstance

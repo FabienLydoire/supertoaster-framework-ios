@@ -31,5 +31,10 @@ import UIKit
 
 extension Double {
     
+    public func rounded(toDecimals decimals: Int) -> Double {
+        let divider = pow(10, Double(decimals))
+        let roundedValue = (self * divider).rounded()
+        return roundedValue / divider
+    }
 }
 

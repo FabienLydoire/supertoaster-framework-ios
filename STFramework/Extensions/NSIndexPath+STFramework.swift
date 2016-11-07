@@ -31,5 +31,9 @@ import UIKit
 
 extension NSIndexPath {
     
+    public func indexPathWithSectionZero() -> NSIndexPath {
+        return NSIndexPath(row: self.row, section: section)
+    }
+    
 }
 

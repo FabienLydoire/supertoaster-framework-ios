@@ -31,6 +31,22 @@ import UIKit
 import CoreData
 
 extension NSFetchedResultsController {
+
+    public func performFetchWithError() -> NSError? {
+        do {
+            try self.performFetch()
+        } catch {
+            return error as NSError
+        }
+        return nil
+    }
     
+    public var sectionZeroNumberOfObjects: Int {
+        if let sections = sections {
+            return Int(sections[0].numberOfObjects)
+        } else {
+            return 0
+        }
+    }
 }
 

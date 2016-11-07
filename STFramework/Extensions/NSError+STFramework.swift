@@ -31,5 +31,8 @@ import UIKit
 
 extension NSError {
     
+    public class func errorWith(domain: String, code: Int = 0, localizedDescription: String) -> NSError {
+        return NSError(domain: domain, code: code, userInfo: [NSLocalizedDescriptionKey: localizedDescription])
+    }
 }
 

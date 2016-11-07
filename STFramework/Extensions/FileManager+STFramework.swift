@@ -31,5 +31,31 @@ import UIKit
 
 extension FileManager {
     
+    public static func documentsDirectoryPath() -> String {
+        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    }
+    
+    public static func cachesDirectoryPath() -> String {
+        var documentsPath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true) as [String]
+        return documentsPath[0]
+    }
+    
+    public static func fileExists(atPath path: String) -> Bool {
+        return FileManager.default.fileExists(atPath: path)
+    }
+    
+    public static func deleteFileIfExists(atPath path: String) -> Bool {
+        var deleteSuccess = false
+        if FileManager.fileExists(atPath: path) {
+            do {
+                deleteSuccess = true
+                try FileManager.default.removeItem(atPath: path)
+            } catch {
+                deleteSuccess = false
+            }
+            
+        }
+        return deleteSuccess
+    }
     
 }
