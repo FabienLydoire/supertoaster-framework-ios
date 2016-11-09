@@ -31,5 +31,17 @@ import UIKit
 
 extension UIImageView {
     
+    public static func newImageView(withImageNamed imageNamed: String, inView view: UIView?) -> UIImageView {
+        return newImageView(withImage: UIImage(named: imageNamed), inView: view)
+    }
+    
+    public static func newImageView(withImage image: UIImage?, inView view: UIView?) -> UIImageView {
+        let imageView = UIImageView(image: image)
+        if let view = view {
+            view.addSubview(imageView)
+        }
+        return imageView
+    }
+    
 }
 

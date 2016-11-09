@@ -31,5 +31,23 @@ import UIKit
 
 extension UIActivityIndicatorView {
     
+    public static func newActivityIndicatorViewWhite() -> UIActivityIndicatorView {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }
+    
+    public static func newActivityIndicatorViewWhiteLarge() -> UIActivityIndicatorView {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }
+    
+    public static func newActivityIndicatorViewGray() -> UIActivityIndicatorView {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.hidesWhenStopped = true
+        return activityIndicatorView
+    }
+    
 }
 

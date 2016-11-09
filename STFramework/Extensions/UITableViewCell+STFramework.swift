@@ -31,5 +31,29 @@ import UIKit
 
 extension UITableViewCell {
     
+    func hideSeparator () {
+        separatorInset = UIEdgeInsetsMake(0, bounds.size.width, 0, 0)
+    }
+    
+    func separatorFillsCell() {
+        layoutMargins = UIEdgeInsets.zero
+        separatorInset = UIEdgeInsets.zero
+    }
+    
+    func separatorFillsCell(withMargin margin: CGFloat) {
+        layoutMargins = UIEdgeInsets.zero
+        separatorInset = UIEdgeInsetsMake(0, margin, 0, margin)
+    }
+    
+    func notTappableCell() {
+        accessoryType = .none
+        selectionStyle = .none
+    }
+    
+    func disabledAndNotTappableCell() {
+        notTappableCell()
+        isUserInteractionEnabled = false
+    }
+    
 }
 

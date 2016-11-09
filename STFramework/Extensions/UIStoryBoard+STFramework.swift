@@ -31,5 +31,10 @@ import UIKit
 
 extension UIStoryboard {
     
+    public static func instantiateViewController(withIdentifier identifier: String, fromStoryboardNamed storyboardName: String) -> UIViewController {
+        let viewController = UIStoryboard(name: storyboardName, bundle: Bundle.main).instantiateViewController(withIdentifier: identifier)
+        return viewController
+    }
+    
 }
 

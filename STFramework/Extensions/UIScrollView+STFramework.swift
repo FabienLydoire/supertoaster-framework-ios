@@ -31,5 +31,10 @@ import UIKit
 
 extension UIScrollView {
     
+    // disables scroll if contentSize < scroll frame
+    public func scrollAutoDisabled() {
+        isScrollEnabled = (contentSize.height <= frame.size.height && contentSize.width <= frame.size.width) ? false : true
+    }
+    
 }
 

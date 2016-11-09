@@ -31,7 +31,22 @@ import UIKit
 
 extension NSMutableAttributedString {
     
-    
+    public static func newAttributedString(withString string: String, font: UIFont, color: UIColor, textAlignment: NSTextAlignment, paddingTop: CGFloat, lineSpacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = textAlignment
+        paragraphStyle.lineSpacing = lineSpacing
+        let attributedString = NSMutableAttributedString(string: string)
+        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle, NSBaselineOffsetAttributeName: -paddingTop], range: NSMakeRange(0, string.characters.count))
+        return attributedString
+    }
+        
+    public static func newAttributedString(withString string: String, font: UIFont, color: UIColor, textAlignment: NSTextAlignment) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = textAlignment
+        let attributedString = NSMutableAttributedString(string: string)
+        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle], range: NSMakeRange(0, string.characters.count))
+        return attributedString
+    }
     
 }
 

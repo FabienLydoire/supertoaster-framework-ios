@@ -22,7 +22,6 @@
 		844DC4F31DCCD5270071B121 /* NSManagedObject+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */; };
 		844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */; };
 		844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */; };
-		844DC4F61DCCD5270071B121 /* NSPredicate+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */; };
 		844DC4F71DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */; };
 		844DC4F81DCCD5270071B121 /* UIBarButtonItem+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */; };
 		844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */; };
@@ -73,7 +72,6 @@
 		844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSManagedObject+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSManagedObjectContext+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSMutableAttributedString+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSPredicate+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIActivityIndicatorView+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIBarButtonItem+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIButton+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -161,7 +159,6 @@
 				844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */,
 				844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */,
 				844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */,
-				844DC4DD1DCCD5270071B121 /* NSPredicate+STFramework.swift */,
 				844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */,
 				844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */,
 				844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */,
@@ -433,7 +430,6 @@
 				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
 				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
 				844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */,
-				844DC4F61DCCD5270071B121 /* NSPredicate+STFramework.swift in Sources */,
 				844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */,
 				844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */,
 				847506D31DCD25F200CF8F60 /* DateFormatter+STFramework.swift in Sources */,

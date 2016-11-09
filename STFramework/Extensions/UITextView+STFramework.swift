@@ -31,5 +31,15 @@ import UIKit
 
 extension UITextView {
     
+    public static func newTextView(withString string: String, inView view: UIView?) -> UITextView {
+        let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        textView.text = string
+        textView.sizeToFit()
+        if let view = view {
+            view.addSubview(textView)
+        }
+        return textView
+    }
+    
 }
 

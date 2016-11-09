@@ -31,6 +31,11 @@ import UIKit
 import CoreData
 
 extension NSManagedObject {
+
+    // refreshes current NSManagedObject in another context
+    func refresh(inContext context: NSManagedObjectContext) -> NSManagedObject {
+        return context.object(with: self.objectID)
+    }
     
 }
 

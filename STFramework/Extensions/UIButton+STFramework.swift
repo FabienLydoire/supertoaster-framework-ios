@@ -31,5 +31,15 @@ import UIKit
 
 extension UIButton {
     
+    public static func newButton(withTitle title: String, target: Any?, action: Selector, inView view: UIView?) -> UIButton {
+        let button = UIButton(type: .custom)
+        button.setTitle(title, for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
+        if let view = view {
+            view.addSubview(button)
+        }
+        return button
+    }
+    
 }
 

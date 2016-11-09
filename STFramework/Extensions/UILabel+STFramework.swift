@@ -31,5 +31,15 @@ import UIKit
 
 extension UILabel {
     
+    public static func newLabel(withString string: String, inView view: UIView?) -> UILabel {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        label.text = string
+        label.sizeToFit()
+        if let view = view {
+            view.addSubview(label)
+        }
+        return label
+    }
+    
 }
 

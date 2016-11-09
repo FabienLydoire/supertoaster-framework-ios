@@ -30,6 +30,24 @@
 import UIKit
 
 extension UIImage {
+    public var width: CGFloat {
+        return size.width
+    }
     
+    public var height: CGFloat {
+        return size.width
+    }
+    
+    @discardableResult
+    public func saveAsJPG(quality: CGFloat, toPath path: String) -> Bool {
+        var success = false
+        let imageData = UIImageJPEGRepresentation(self, quality)
+        do {
+            try imageData?.write(to:URL(fileURLWithPath: path), options: Data.WritingOptions.atomic)
+            success = true
+        } catch {
+        }
+        return success
+    }
 }
 

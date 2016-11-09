@@ -31,5 +31,36 @@ import UIKit
 
 extension UserDefaults {
     
+    public static func setBool(_ value: Bool, forKey key: String) {
+        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    public static func bool(forKey key: String) -> Bool {
+        return UserDefaults.standard.bool(forKey: key)
+    }
+    
+    public static func setString(_ value: String, forKey key: String) {
+        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    public static func string(forKey key: String) -> String? {
+        if let value = UserDefaults.standard.value(forKey: key) as? String {
+            return value
+        } else {
+            return nil
+        }
+    }
+    
+    public static func setAnyValue(_ value: Any, forKey key: String) {
+        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    public static func anyValue(forKey key: String) -> Any? {
+        return UserDefaults.standard.value(forKey: key)
+    }
+    
 }
 
