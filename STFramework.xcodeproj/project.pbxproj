@@ -35,7 +35,6 @@
 		844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */; };
 		844DC5021DCCD5270071B121 /* UIStoryBoard+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */; };
 		844DC5031DCCD5270071B121 /* UITableView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */; };
-		844DC5041DCCD5270071B121 /* UITableViewCell+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */; };
 		844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */; };
 		844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */; };
 		8457E8991DCCE59900F61021 /* Data+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457E8981DCCE59900F61021 /* Data+STFramework.swift */; };
@@ -85,7 +84,6 @@
 		844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+STFramework.swift"; sourceTree = "<group>"; };
-		844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+STFramework.swift"; sourceTree = "<group>"; };
 		8457E8981DCCE59900F61021 /* Data+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Data+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -173,7 +171,6 @@
 				844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */,
 				844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */,
 				844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */,
-				844DC4EB1DCCD5270071B121 /* UITableViewCell+STFramework.swift */,
 				844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */,
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
@@ -425,7 +422,6 @@
 				847506D51DCD355900CF8F60 /* Date+STFramework.swift in Sources */,
 				844DC4FA1DCCD5270071B121 /* UICollectionView+STFramework.swift in Sources */,
 				844DC4D21DCCD3750071B121 /* UIView+STFramework.swift in Sources */,
-				844DC5041DCCD5270071B121 /* UITableViewCell+STFramework.swift in Sources */,
 				844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */,
 				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
 				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
