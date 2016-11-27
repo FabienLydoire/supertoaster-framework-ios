@@ -42,6 +42,7 @@
 		847506D31DCD25F200CF8F60 /* DateFormatter+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */; };
 		847506D51DCD355900CF8F60 /* Date+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847506D41DCD355900CF8F60 /* Date+STFramework.swift */; };
 		847708641DCCA951000A44C7 /* STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8477085A1DCCA951000A44C7 /* STFramework.framework */; };
+		848395CB1DEB3A9500601F8E /* UITableViewCell+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		8477085E1DCCA951000A44C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847708631DCCA951000A44C7 /* STFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477086A1DCCA951000A44C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+STFramework.swift"; sourceTree = "<group>"; };
 		AFC3BD5C68B8E5955437CA64 /* Pods-STFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0A22AA169621D6D93D4DAB5 /* Pods-STFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F2D40E9E73983981C186D299 /* Pods_STFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */,
 				844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */,
 				844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */,
+				848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */,
 				844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */,
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
@@ -440,6 +443,7 @@
 				844DC4FE1DCCD5270071B121 /* UIImageView+STFramework.swift in Sources */,
 				844DC4D01DCCD3650071B121 /* Int+STFramework.swift in Sources */,
 				844DC4EF1DCCD5270071B121 /* NSError+STFramework.swift in Sources */,
+				848395CB1DEB3A9500601F8E /* UITableViewCell+STFramework.swift in Sources */,
 				844DC5021DCCD5270071B121 /* UIStoryBoard+STFramework.swift in Sources */,
 				844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */,
 				844DC4D41DCCD39F0071B121 /* FileManager+STFramework.swift in Sources */,
