@@ -118,6 +118,7 @@ class ExtensionsTests: XCTestCase {
         XCTAssertTrue(seconds.secondsFormatString() == "01:01:01")
         XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .hoursMinutes) == "01:01")
         XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .minutesSeconds) == "01:01")
+        XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .minutesSecondsWithFormat("%01d:%02d")) == "1:01")
     }
     
     func testRect() {
@@ -128,10 +129,11 @@ class ExtensionsTests: XCTestCase {
         XCTAssertTrue(r.y == 0)
         r.y = 100
         XCTAssertTrue(r.y == 100)
+        
         var r1 = CGRect.oneByOne()
         XCTAssertTrue(r1.x == 0 && r1.y == 0 && r1.size.width == 1 && r1.size.height == 1)
-        r1.width = 50
-        r1.height = 60
+        r1.rectWidth = 50
+        r1.rectHeight = 60
         XCTAssertTrue(r1.x == 0 && r1.y == 0 && r1.size.width == 50 && r1.size.height == 60)
 
         let r2 = CGRect.none()

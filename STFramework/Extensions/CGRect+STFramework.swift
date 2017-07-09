@@ -63,7 +63,7 @@ extension CGRect {
         }
     }
     
-    public var width: CGFloat {
+    public var rectWidth: CGFloat {
         get {
             return size.width
         }
@@ -74,7 +74,7 @@ extension CGRect {
         }
     }
     
-    public var height: CGFloat {
+    public var rectHeight: CGFloat {
         get {
             return size.height
         }

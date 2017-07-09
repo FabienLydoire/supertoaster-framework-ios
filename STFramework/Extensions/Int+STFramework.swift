@@ -32,7 +32,7 @@ import UIKit
 extension Int {
     
     public enum SecondsFormatterType {
-        case hoursMinutesSeconds, hoursMinutes, minutesSeconds
+        case hoursMinutesSeconds, hoursMinutes, minutesSeconds, minutesSecondsWithFormat(String)
     }
     
     public func secondsFormatString(withSecondsFormatterType formatterType: SecondsFormatterType? = nil) -> String {
@@ -46,11 +46,13 @@ extension Int {
         }
         switch formatterTypeUnwrapped {
         case .hoursMinutesSeconds:
-            return String(format:"%02d:%02d:%02d", hours, minutes, seconds)
+            return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         case .hoursMinutes:
-            return String(format:"%02d:%02d", hours, minutes)
+            return String(format: "%02d:%02d", hours, minutes)
         case .minutesSeconds:
-            return String(format:"%02d:%02d", minutes, seconds)
+            return String(format: "%02d:%02d", minutes, seconds)
+        case .minutesSecondsWithFormat(let format):
+            return String(format: format, minutes, seconds)
         }
     }
 

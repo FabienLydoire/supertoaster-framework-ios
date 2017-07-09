@@ -30,6 +30,9 @@
 import UIKit
 
 struct TableViewCellOptions: OptionSet {
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
     let rawValue: Int
     static let separatorHidden = TableViewCellOptions(rawValue: 1)
     static let separatorFillsCell = TableViewCellOptions(rawValue: 2)
