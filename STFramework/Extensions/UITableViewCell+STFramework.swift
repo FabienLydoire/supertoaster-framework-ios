@@ -29,11 +29,11 @@
 
 import UIKit
 
-struct TableViewCellOptions: OptionSet {
+public struct TableViewCellOptions: OptionSet {
     public init(rawValue: Int) {
         self.rawValue = rawValue
     }
-    let rawValue: Int
+    public let rawValue: Int
     static let separatorHidden = TableViewCellOptions(rawValue: 1)
     static let separatorFillsCell = TableViewCellOptions(rawValue: 2)
     static let notTappable = TableViewCellOptions(rawValue: 4)
@@ -42,7 +42,7 @@ struct TableViewCellOptions: OptionSet {
 
 extension UITableViewCell {
     
-    func setCellOptions(options: TableViewCellOptions) {
+    public func setCellOptions(options: TableViewCellOptions) {
         if options.contains(.separatorHidden) {
             separatorInset = UIEdgeInsetsMake(0, bounds.size.width, 0, 0)
             
