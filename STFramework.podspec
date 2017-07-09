@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STFramework"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "A collection of tools and helper classes for iOS projects"
   s.description  = "The Super Toaster Framework is a collection of tools and helper classes for iOS projects"
 
