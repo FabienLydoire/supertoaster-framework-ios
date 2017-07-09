@@ -34,10 +34,10 @@ public struct TableViewCellOptions: OptionSet {
         self.rawValue = rawValue
     }
     public let rawValue: Int
-    static let separatorHidden = TableViewCellOptions(rawValue: 1)
-    static let separatorFillsCell = TableViewCellOptions(rawValue: 2)
-    static let notTappable = TableViewCellOptions(rawValue: 4)
-    static let disabled = TableViewCellOptions(rawValue: 8)
+    public static let separatorHidden = TableViewCellOptions(rawValue: 1)
+    public static let separatorFillsCell = TableViewCellOptions(rawValue: 2)
+    public static let notTappable = TableViewCellOptions(rawValue: 4)
+    public static let disabled = TableViewCellOptions(rawValue: 8)
 }
 
 extension UITableViewCell {
