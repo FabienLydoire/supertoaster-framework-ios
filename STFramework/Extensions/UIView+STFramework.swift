@@ -76,6 +76,17 @@ extension UIView {
         }
     }
     
+    public var size: CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            var newFrame = frame
+            newFrame.size = newValue
+            frame = newFrame
+        }
+    }
+    
     // MARK: - NSLayoutConstraint helpers
     // MARK: Size
     public var layoutConstraintSuperview: UIView? {

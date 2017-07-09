@@ -67,6 +67,12 @@ class ExtensionsTests: XCTestCase {
         XCTAssert(string.appendUUIDString().length > string.length)
         XCTAssert(String.UUIDGlobalString().isNotEmpty)
         XCTAssert(string.appendUUIDGlobalString().length > string.length)
+        
+        
+        XCTAssertNil(String.stringIfNotEmpty(nil))
+        XCTAssertNil(String.stringIfNotEmpty(""))
+        XCTAssertNotNil(String.stringIfNotEmpty("a"))
+
 
     }
     
@@ -112,5 +118,60 @@ class ExtensionsTests: XCTestCase {
         XCTAssertTrue(seconds.secondsFormatString() == "01:01:01")
         XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .hoursMinutes) == "01:01")
         XCTAssertTrue(seconds.secondsFormatString(withSecondsFormatterType: .minutesSeconds) == "01:01")
+    }
+    
+    func testRect() {
+        var r = CGRect(x: 0, y: 0, width: 100, height: 100)
+        XCTAssertTrue(r.x == 0)
+        r.x = 100
+        XCTAssertTrue(r.x == 100)
+        XCTAssertTrue(r.y == 0)
+        r.y = 100
+        XCTAssertTrue(r.y == 100)
+        var r1 = CGRect.oneByOne()
+        XCTAssertTrue(r1.x == 0 && r1.y == 0 && r1.size.width == 1 && r1.size.height == 1)
+        r1.width = 50
+        r1.height = 60
+        XCTAssertTrue(r1.x == 0 && r1.y == 0 && r1.size.width == 50 && r1.size.height == 60)
+
+        let r2 = CGRect.none()
+        XCTAssertTrue(r2.x == 0 && r2.y == 0 && r2.size.width == 0 && r2.size.height == 0)
+        
+        var rect3 = CGRect(x: 100, y: 50, width: 150, height: 200)
+        XCTAssertTrue(rect3.top == 50)
+        XCTAssertTrue(rect3.bottom == 250)
+        XCTAssertTrue(rect3.right == 250)
+        XCTAssertTrue(rect3.left == 100)
+        
+        rect3.top = 150
+        XCTAssertTrue(rect3.top == 150)
+
+        rect3.bottom = 150
+        XCTAssertTrue(rect3.bottom == 150)
+        
+        rect3.right = 150
+        XCTAssertTrue(rect3.right == 150)
+        
+        rect3.left = 150
+        XCTAssertTrue(rect3.left == 150)
+    }
+    
+    func testUIView() {
+        let v1 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 20))
+        XCTAssertTrue(v1.size.width == 10 && v1.size.height == 20)
+        v1.size = CGSize(width: 20, height: 10)
+        XCTAssertTrue(v1.size.width == 20 && v1.size.height == 10)
+
+        
+        
+    }
+    
+    func testDictionary() {
+        let dict: [String: Any] = ["a": "a", "b": "b"]
+        guard let url = "a".asURLInDocumentDirectory() else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssertTrue(dict.saveAsPlist(to: url))
     }
 }

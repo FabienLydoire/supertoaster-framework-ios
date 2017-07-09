@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A311F73BA136366B2319D42 /* Pods_STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */; };
 		55CE6AE8DA582633929B67F4 /* Pods_STFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D40E9E73983981C186D299 /* Pods_STFrameworkTests.framework */; };
+		843B922B1EF3E5F900CA58DC /* Random+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */; };
 		844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */; };
 		844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */; };
 		844DC4D01DCCD3650071B121 /* Int+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */; };
@@ -38,11 +39,17 @@
 		844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */; };
 		844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */; };
 		8457E8991DCCE59900F61021 /* Data+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457E8981DCCE59900F61021 /* Data+STFramework.swift */; };
+		8472E49B1E00271100D56975 /* UITextField+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472E49A1E00271100D56975 /* UITextField+STFramework.swift */; };
+		8472E49F1E002A6300D56975 /* UIViewController+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */; };
 		847506D11DCD25C300CF8F60 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847506CF1DCD255600CF8F60 /* ExtensionsTests.swift */; };
 		847506D31DCD25F200CF8F60 /* DateFormatter+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */; };
 		847506D51DCD355900CF8F60 /* Date+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847506D41DCD355900CF8F60 /* Date+STFramework.swift */; };
 		847708641DCCA951000A44C7 /* STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8477085A1DCCA951000A44C7 /* STFramework.framework */; };
 		848395CB1DEB3A9500601F8E /* UITableViewCell+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */; };
+		84C0D5C31DFEDA7100A3F55F /* NotificationCenter+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0D5C21DFEDA7100A3F55F /* NotificationCenter+STFramework.swift */; };
+		84DFB1041EF405CF00A0C24B /* ExtensionsFileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFB1031EF405CF00A0C24B /* ExtensionsFileManagerTests.swift */; };
+		84DFB1091EF40A4100A0C24B /* Dictionary+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFB1081EF40A4100A0C24B /* Dictionary+STFramework.swift */; };
+		84FE44D91F126DE500D699F8 /* CGRect+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +66,10 @@
 		07ED39B409C3925A7E94AA76 /* Pods-STFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		50A0E1A841449F4E32E9CEF5 /* Pods-STFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "String+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Double+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Int+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Int+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "FileManager+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4D51DCCD5270071B121 /* Array+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Array+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -74,7 +82,7 @@
 		844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSMutableAttributedString+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIActivityIndicatorView+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIBarButtonItem+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIButton+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		844DC4E01DCCD5270071B121 /* UIButton+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIButton+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4E11DCCD5270071B121 /* UICollectionView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UICollectionView+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4E21DCCD5270071B121 /* UIColor+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIColor+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4E31DCCD5270071B121 /* UIDevice+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIDevice+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -88,6 +96,8 @@
 		844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+STFramework.swift"; sourceTree = "<group>"; };
 		8457E8981DCCE59900F61021 /* Data+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Data+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8472E49A1E00271100D56975 /* UITextField+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+STFramework.swift"; sourceTree = "<group>"; };
+		8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+STFramework.swift"; sourceTree = "<group>"; };
 		847506CF1DCD255600CF8F60 /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ExtensionsTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "DateFormatter+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		847506D41DCD355900CF8F60 /* Date+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Date+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -96,6 +106,10 @@
 		847708631DCCA951000A44C7 /* STFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8477086A1DCCA951000A44C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+STFramework.swift"; sourceTree = "<group>"; };
+		84C0D5C21DFEDA7100A3F55F /* NotificationCenter+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+STFramework.swift"; sourceTree = "<group>"; };
+		84DFB1031EF405CF00A0C24B /* ExtensionsFileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsFileManagerTests.swift; sourceTree = "<group>"; };
+		84DFB1081EF40A4100A0C24B /* Dictionary+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+STFramework.swift"; sourceTree = "<group>"; };
+		84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+STFramework.swift"; sourceTree = "<group>"; };
 		AFC3BD5C68B8E5955437CA64 /* Pods-STFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0A22AA169621D6D93D4DAB5 /* Pods-STFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F2D40E9E73983981C186D299 /* Pods_STFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,9 +163,11 @@
 				8457E8981DCCE59900F61021 /* Data+STFramework.swift */,
 				847506D41DCD355900CF8F60 /* Date+STFramework.swift */,
 				847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */,
+				84DFB1081EF40A4100A0C24B /* Dictionary+STFramework.swift */,
 				844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */,
 				844DC4D31DCCD39F0071B121 /* FileManager+STFramework.swift */,
 				844DC4CE1DCCD3650071B121 /* Int+STFramework.swift */,
+				84C0D5C21DFEDA7100A3F55F /* NotificationCenter+STFramework.swift */,
 				844DC4D61DCCD5270071B121 /* NSError+STFramework.swift */,
 				844DC4D71DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift */,
 				844DC4D81DCCD5270071B121 /* NSIndexPath+STFramework.swift */,
@@ -159,6 +175,7 @@
 				844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */,
 				844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */,
 				844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */,
+				843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */,
 				844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */,
 				844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */,
 				844DC4DF1DCCD5270071B121 /* UIBarButtonItem+STFramework.swift */,
@@ -174,9 +191,12 @@
 				844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */,
 				844DC4EA1DCCD5270071B121 /* UITableView+STFramework.swift */,
 				848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */,
+				8472E49A1E00271100D56975 /* UITextField+STFramework.swift */,
 				844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */,
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
+				8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
+				84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				847506CF1DCD255600CF8F60 /* ExtensionsTests.swift */,
+				84DFB1031EF405CF00A0C24B /* ExtensionsFileManagerTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,14 +448,17 @@
 				844DC4D21DCCD3750071B121 /* UIView+STFramework.swift in Sources */,
 				844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */,
 				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
+				84DFB1091EF40A4100A0C24B /* Dictionary+STFramework.swift in Sources */,
 				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
 				844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */,
 				844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */,
 				844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */,
+				8472E49F1E002A6300D56975 /* UIViewController+STFramework.swift in Sources */,
 				847506D31DCD25F200CF8F60 /* DateFormatter+STFramework.swift in Sources */,
 				844DC4F31DCCD5270071B121 /* NSManagedObject+STFramework.swift in Sources */,
 				844DC4FD1DCCD5270071B121 /* UIImage+STFramework.swift in Sources */,
 				844DC5001DCCD5270071B121 /* UIScreen+STFramework.swift in Sources */,
+				8472E49B1E00271100D56975 /* UITextField+STFramework.swift in Sources */,
 				8457E8991DCCE59900F61021 /* Data+STFramework.swift in Sources */,
 				844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */,
 				844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */,
@@ -446,12 +470,15 @@
 				848395CB1DEB3A9500601F8E /* UITableViewCell+STFramework.swift in Sources */,
 				844DC5021DCCD5270071B121 /* UIStoryBoard+STFramework.swift in Sources */,
 				844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */,
+				84FE44D91F126DE500D699F8 /* CGRect+STFramework.swift in Sources */,
 				844DC4D41DCCD39F0071B121 /* FileManager+STFramework.swift in Sources */,
 				844DC4F21DCCD5270071B121 /* NSLayoutConstraint+STFramework.swift in Sources */,
 				844DC4F11DCCD5270071B121 /* NSIndexPath+STFramework.swift in Sources */,
 				844DC4F71DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift in Sources */,
 				844DC4F81DCCD5270071B121 /* UIBarButtonItem+STFramework.swift in Sources */,
 				844DC4EE1DCCD5270071B121 /* Array+STFramework.swift in Sources */,
+				843B922B1EF3E5F900CA58DC /* Random+STFramework.swift in Sources */,
+				84C0D5C31DFEDA7100A3F55F /* NotificationCenter+STFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847506D11DCD25C300CF8F60 /* ExtensionsTests.swift in Sources */,
+				84DFB1041EF405CF00A0C24B /* ExtensionsFileManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07ED39B409C3925A7E94AA76 /* Pods-STFramework.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -598,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0A22AA169621D6D93D4DAB5 /* Pods-STFramework.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;

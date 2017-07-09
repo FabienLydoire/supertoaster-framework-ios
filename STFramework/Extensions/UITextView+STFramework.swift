@@ -32,7 +32,7 @@ import UIKit
 extension UITextView {
     
     public static func newTextView(withString string: String, inView view: UIView?) -> UITextView {
-        let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        let textView = UITextView(frame: CGRect.oneByOne())
         textView.text = string
         textView.sizeToFit()
         if let view = view {
@@ -41,5 +41,9 @@ extension UITextView {
         return textView
     }
     
+    // returns .text string if not empty
+    public var textIfNotEmpty: String? {
+        return String.stringIfNotEmpty(self.text)
+    }
 }
 

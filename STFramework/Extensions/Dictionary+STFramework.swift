@@ -1,8 +1,8 @@
 //
-//  UILabel+STFramework.swift
+//  Dictionary+STFramework.swift
 //  STFramework - Super Toaster Framework
 //
-//  Created by Louis de Decker 
+//  Created by Louis de Decker
 //
 //  MIT License
 //
@@ -15,10 +15,10 @@
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //  copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
-//  
+//
 //  The above copyright notice and this permission notice shall be included in all
 //  copies or substantial portions of the Software.
-//  
+//
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,21 +29,20 @@
 
 import UIKit
 
-extension UILabel {
+extension Dictionary {
     
-    public static func newLabel(withString string: String, inView view: UIView?) -> UILabel {
-        let label = UILabel(frame: CGRect.oneByOne())
-        label.text = string
-        label.sizeToFit()
-        if let view = view {
-            view.addSubview(label)
+    public func saveAsPlist(to url: URL) -> Bool {
+        do {
+            let data = try PropertyListSerialization.data(fromPropertyList: self, format: .xml, options: 0)
+            do {
+                try data.write(to: url)
+                return true
+            } catch {
+                return false
+            }
+        } catch {
+            return false
         }
-        return label
-    }
+    }    
     
-    // returns .text string if not empty
-    public var textIfNotEmpty: String? {
-        return String.stringIfNotEmpty(self.text)
-    }
 }
-

@@ -63,6 +63,15 @@ extension String {
         return !isEmptyTrimmed
     }
     
+    // if string is not empty, returns string
+    public static func stringIfNotEmpty(_ string:String?) -> String? {
+        if let string = string, string.characters.count > 0 {
+            return string
+        } else {
+            return nil
+        }
+    }
+    
     public func contains(string: String) -> Bool {
         return self.range(of: string) != nil
     }

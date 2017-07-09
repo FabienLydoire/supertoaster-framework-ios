@@ -30,24 +30,59 @@
 import UIKit
 
 extension UIImage {
+    // returns width of an image
     public var width: CGFloat {
         return size.width
     }
-    
+
+    // returns height of an image
     public var height: CGFloat {
-        return size.width
+        return size.height
+    }
+
+    // saves the image as a JPG to an URL
+    @discardableResult
+    public func saveAsJPG(to url: URL?, quality: CGFloat?) -> Bool {
+        guard let url = url, let imageData = UIImageJPEGRepresentation(self, quality ?? 0.9) else {
+            return false
+        }
+        do {
+            try imageData.write(to: url, options: Data.WritingOptions.atomic)
+            return true
+        } catch {
+            return false
+        }
     }
     
+    // saves the image as a JPG in .documentDirectory using a pathComponent
     @discardableResult
-    public func saveAsJPG(quality: CGFloat, toPath path: String) -> Bool {
-        var success = false
-        let imageData = UIImageJPEGRepresentation(self, quality)
-        do {
-            try imageData?.write(to:URL(fileURLWithPath: path), options: Data.WritingOptions.atomic)
-            success = true
-        } catch {
+    public func saveAsJPG(inDocumentDirectoryWithPathComponent pathComponent: String, quality: CGFloat?) -> URL? {
+        guard let url = pathComponent.asURLInDocumentDirectory(), self.saveAsJPG(to: url, quality: quality) else {
+            return nil
         }
-        return success
+        return url
+    }
+    
+    // saves the image as a PNG to an URL
+    @discardableResult
+    public func saveAsPNG(to url: URL?) -> Bool {
+        guard let url = url, let imageData = UIImagePNGRepresentation(self) else {
+            return false
+        }
+        do {
+            try imageData.write(to: url, options: Data.WritingOptions.atomic)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
+    // saves the image as a PNG in .documentDirectory using a pathComponent
+    @discardableResult
+    public func saveAsPNG(inDocumentDirectoryWithPathComponent pathComponent: String) -> URL? {
+        guard let url = pathComponent.asURLInDocumentDirectory(), self.saveAsPNG(to: url) else {
+            return nil
+        }
+        return url
     }
 }
-
