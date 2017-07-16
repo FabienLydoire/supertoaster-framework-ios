@@ -49,6 +49,10 @@
 		84C0D5C31DFEDA7100A3F55F /* NotificationCenter+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0D5C21DFEDA7100A3F55F /* NotificationCenter+STFramework.swift */; };
 		84DFB1041EF405CF00A0C24B /* ExtensionsFileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFB1031EF405CF00A0C24B /* ExtensionsFileManagerTests.swift */; };
 		84DFB1091EF40A4100A0C24B /* Dictionary+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFB1081EF40A4100A0C24B /* Dictionary+STFramework.swift */; };
+		84EB5CDE1F161E7C000EA7B8 /* AVAsset+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB5CDC1F161E7C000EA7B8 /* AVAsset+STFramework.swift */; };
+		84EB5CDF1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB5CDD1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift */; };
+		84EB5CE21F16218C000EA7B8 /* CGFloat+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB5CE11F16218C000EA7B8 /* CGFloat+STFramework.swift */; };
+		84EB5CE41F162244000EA7B8 /* CGPoint+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB5CE31F162244000EA7B8 /* CGPoint+STFramework.swift */; };
 		84FE44D91F126DE500D699F8 /* CGRect+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +113,10 @@
 		84C0D5C21DFEDA7100A3F55F /* NotificationCenter+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+STFramework.swift"; sourceTree = "<group>"; };
 		84DFB1031EF405CF00A0C24B /* ExtensionsFileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsFileManagerTests.swift; sourceTree = "<group>"; };
 		84DFB1081EF40A4100A0C24B /* Dictionary+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+STFramework.swift"; sourceTree = "<group>"; };
+		84EB5CDC1F161E7C000EA7B8 /* AVAsset+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+STFramework.swift"; sourceTree = "<group>"; };
+		84EB5CDD1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAssetExportSession+STFramework.swift"; sourceTree = "<group>"; };
+		84EB5CE11F16218C000EA7B8 /* CGFloat+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+STFramework.swift"; sourceTree = "<group>"; };
+		84EB5CE31F162244000EA7B8 /* CGPoint+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+STFramework.swift"; sourceTree = "<group>"; };
 		84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+STFramework.swift"; sourceTree = "<group>"; };
 		AFC3BD5C68B8E5955437CA64 /* Pods-STFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0A22AA169621D6D93D4DAB5 /* Pods-STFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +168,11 @@
 			isa = PBXGroup;
 			children = (
 				844DC4D51DCCD5270071B121 /* Array+STFramework.swift */,
+				84EB5CDC1F161E7C000EA7B8 /* AVAsset+STFramework.swift */,
+				84EB5CDD1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift */,
+				84EB5CE11F16218C000EA7B8 /* CGFloat+STFramework.swift */,
+				84EB5CE31F162244000EA7B8 /* CGPoint+STFramework.swift */,
+				84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */,
 				8457E8981DCCE59900F61021 /* Data+STFramework.swift */,
 				847506D41DCD355900CF8F60 /* Date+STFramework.swift */,
 				847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */,
@@ -196,7 +209,6 @@
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
 				8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
-				84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,14 +455,18 @@
 			files = (
 				844DC5051DCCD5270071B121 /* UITextView+STFramework.swift in Sources */,
 				844DC4FB1DCCD5270071B121 /* UIColor+STFramework.swift in Sources */,
+				84EB5CE21F16218C000EA7B8 /* CGFloat+STFramework.swift in Sources */,
 				847506D51DCD355900CF8F60 /* Date+STFramework.swift in Sources */,
 				844DC4FA1DCCD5270071B121 /* UICollectionView+STFramework.swift in Sources */,
 				844DC4D21DCCD3750071B121 /* UIView+STFramework.swift in Sources */,
 				844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */,
+				84EB5CDF1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift in Sources */,
 				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
 				84DFB1091EF40A4100A0C24B /* Dictionary+STFramework.swift in Sources */,
 				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
 				844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */,
+				84EB5CE41F162244000EA7B8 /* CGPoint+STFramework.swift in Sources */,
+				84EB5CDE1F161E7C000EA7B8 /* AVAsset+STFramework.swift in Sources */,
 				844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */,
 				844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */,
 				8472E49F1E002A6300D56975 /* UIViewController+STFramework.swift in Sources */,

@@ -163,9 +163,6 @@ class ExtensionsTests: XCTestCase {
         XCTAssertTrue(v1.size.width == 10 && v1.size.height == 20)
         v1.size = CGSize(width: 20, height: 10)
         XCTAssertTrue(v1.size.width == 20 && v1.size.height == 10)
-
-        
-        
     }
     
     func testDictionary() {
@@ -175,5 +172,17 @@ class ExtensionsTests: XCTestCase {
             return
         }
         XCTAssertTrue(dict.saveAsPlist(to: url))
+    }
+    
+    func testCGPoint() {
+        let point = CGPoint(x: 0, y: 0)
+        let targetPoint = CGPoint(x: 10, y: 20)
+        let easedPoint = point.easeOut(to: targetPoint, withDamping: 5)
+        XCTAssert(easedPoint.x == 2 && easedPoint.y == 4)
+    }
+    
+    func testCGFloat() {
+        let value: CGFloat = 0
+        XCTAssert(value.easeOut(to: 10, withDamping: 5) == 2)
     }
 }

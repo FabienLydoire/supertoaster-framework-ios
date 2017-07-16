@@ -42,6 +42,30 @@ extension FileManager {
         return documentsPath[0]
     }
     
+    // returns an optional URL for a path component in a directory
+    public static func url(forPathComponent pathComponent: String, in directory: FileManager.SearchPathDirectory) -> URL? {
+        do {
+            var pathComponentCleaned = pathComponent
+            if pathComponent.hasPrefix("/") {
+                pathComponentCleaned = pathComponent.removeFirstCharacter()
+            }
+            let url = try FileManager.default.url(for: directory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(pathComponentCleaned)
+            return url
+        } catch {
+            return nil
+        }
+    }
+    
+    // returns an optional URL for a path component in .documentDirectory
+    public static func url(forPathComponentInDocument pathComponent: String) -> URL? {
+        return FileManager.url(forPathComponent: pathComponent, in: .documentDirectory)
+    }
+    
+    // returns an optional URL for a path component in .cachesDirectory
+    public static func url(forPathComponentInCache pathComponent: String) -> URL? {
+        return FileManager.url(forPathComponent: pathComponent, in: .cachesDirectory)
+    }
+    
     // tests if file exists
     @discardableResult
     public static func fileExists(at url: URL) -> Bool {
@@ -62,6 +86,19 @@ extension FileManager {
         }
     }
     
+    // deletes all items from a particular directory that match a specific criteria
+    public static func removeItems(at url: URL?, matching: (_ fileName: String) -> Bool) {
+        guard let url = url, let itemURLs = listFileURLs(atPath: url.path) else {
+            return
+        }
+        itemURLs.forEach { itemURL in
+            // ask calling function if this item needs to be removed
+            if matching(itemURL.lastPathComponent) {
+                removeItem(at: itemURL)
+            }
+        }
+    }
+    
     // moves an item
     @discardableResult
     public static func moveItem(from atUrl: URL?, to toURL: URL?) -> Bool {
@@ -76,25 +113,66 @@ extension FileManager {
         }
     }
     
-    // returns an optional URL for a path component in a directory
-    public static func url(forPathComponent pathComponent: String, in directory: FileManager.SearchPathDirectory) -> URL? {
+    // replaces an item with another
+    @discardableResult
+    public static func replaceItemAt(_ originalItem: URL?, withItemAt itemAt: URL?) -> Bool {
+        guard let originalItem = originalItem, let itemAt = itemAt else {
+            return false
+        }
         do {
-            let url = try FileManager.default.url(for: directory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(pathComponent)
-            return url
+            _ = try FileManager.default.replaceItemAt(originalItem, withItemAt: itemAt)
+            return true
+        } catch {
+            return false
+        }
+    }
+    
+    // creates a directory at an URL
+    @discardableResult
+    public static func createDirectory(at: URL?) -> URL? {
+        guard let at = at else {
+            return nil
+        }
+        do {
+            try FileManager.default.createDirectory(at: at, withIntermediateDirectories: true, attributes: nil)
+            return at
         } catch {
             return nil
         }
     }
     
-    // returns an optional URL for a path component in .documentDirectory
-    public static func url(forPathComponentInDocument pathComponent: String) -> URL? {
-        return FileManager.url(forPathComponent: pathComponent, in: .documentDirectory)
+    // creates a directory in documents
+    @discardableResult
+    public static func createDirectoryInDocuments(named: String) -> URL? {
+        return FileManager.createDirectory(at: named.asURLInDocumentDirectory())
     }
     
-    // returns an optional URL for a path component in .cachesDirectory
-    public static func url(forPathComponentInCache pathComponent: String) -> URL? {
-        return FileManager.url(forPathComponent: pathComponent, in: .cachesDirectory)
-    }    
+    // returns file names for a given path
+    public static func listFileNames(atPath path: String) -> [String]? {
+        do {
+            let contentsOfDirectory = try FileManager.default.contentsOfDirectory(atPath: path)
+            return contentsOfDirectory
+        } catch {
+            return nil
+        }
+    }
+   
+    // returns file URLs contained in a directory
+    public static func listFileURLs(atPath path: String) -> [URL]? {
+        guard let fileNames = FileManager.listFileNames(atPath: path) else {
+            return nil
+        }
+        var pathString = path
+        // add "/" if path does not finished with /
+        if !pathString.hasSuffix("/") {
+            pathString += "/"
+        }
+        let fileURLs = fileNames.map { fileName -> URL? in
+            return URL(fileURLWithPath: "\(pathString)\(fileName)")
+        }
+        // return array of non-nil items
+        return fileURLs.flatMap { return $0 }
+    }
 }
 
 extension String {

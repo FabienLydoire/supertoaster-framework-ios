@@ -65,7 +65,7 @@ extension Date {
     }
     
     public static var timestamp: String {
-        let dateString = Date().string(withStringFormat: "yyyy-MM-dd_HH-mm-ss_SSS")
+        let dateString = Date().string(withStringFormat: "yyyyMMdd_HHmmss_SSS")
         let randomValue = arc4random_uniform(10000)
         let uniqueString = String(format: "%@_%04d", dateString, randomValue)
         return uniqueString
@@ -93,5 +93,4 @@ extension Date {
     public static var deviceDate: Date {
         return Date().deviceDate
     }   
-    
 }
