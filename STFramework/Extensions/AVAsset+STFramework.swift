@@ -33,12 +33,12 @@ import AVFoundation
 extension AVAsset {
     
     // returns asset duration in seconds
-    var durationInSeconds: Float {
+    public var durationInSeconds: Float {
         return Float(duration.value) / Float(duration.timescale)
     }
     
     // returns asset image size
-    var imageSize: CGSize? {
+    public var imageSize: CGSize? {
         guard let firstTrack = tracks(withMediaType: AVMediaTypeVideo).first else {
             return nil
         }
@@ -47,7 +47,7 @@ extension AVAsset {
     }
     
     // returns asset orientation
-    var orientation: UIInterfaceOrientation? {
+    public var orientation: UIInterfaceOrientation? {
         guard let video = tracks(withMediaType: AVMediaTypeVideo).first else {
             return nil
         }
@@ -68,17 +68,17 @@ extension AVAsset {
 extension URL {
     
     // returns duration in seconds of an AVAsset located at this URL
-    var avAssetDurationInSeconds: Float {
+    public var avAssetDurationInSeconds: Float {
         return AVAsset(url: self).durationInSeconds
     }
     
     // returns image size of an AVAsset located at this URL
-    var avAssetImageSize: CGSize? {
+    public var avAssetImageSize: CGSize? {
         return AVAsset(url: self).imageSize
     }
     
     // returns orientation of an AVAsset located at this URL
-    var avAssetOrientation: UIInterfaceOrientation? {
+    public var avAssetOrientation: UIInterfaceOrientation? {
         return AVAsset(url: self).orientation
     }
     

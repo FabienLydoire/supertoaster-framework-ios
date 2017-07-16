@@ -34,13 +34,13 @@ extension AVAssetExportSession {
     
     // trims a video if its duration exceeds
     @discardableResult
-    static func trimVideo(sourceURL: URL, destinationURL: URL, maxDuration: Float, finished: @escaping (_ success: Bool) -> Void) -> AVAssetExportSession? {
+    public static func trimVideo(sourceURL: URL, destinationURL: URL, maxDuration: Float, finished: @escaping (_ success: Bool) -> Void) -> AVAssetExportSession? {
         return trimVideo(sourceURL: sourceURL, destinationURL: destinationURL, startTime: 0, endTime: maxDuration, finished: finished)
     }
     
     // trims a video
     @discardableResult
-    static func trimVideo(sourceURL: URL, destinationURL: URL, startTime: Float, endTime: Float, outputFileType: String? = AVFileTypeMPEG4, finished: @escaping (_ success: Bool) -> Void) -> AVAssetExportSession? {
+    public static func trimVideo(sourceURL: URL, destinationURL: URL, startTime: Float, endTime: Float, outputFileType: String? = AVFileTypeMPEG4, finished: @escaping (_ success: Bool) -> Void) -> AVAssetExportSession? {
         guard FileManager.fileExists(at: sourceURL) else {
             finished(false)
             return nil
