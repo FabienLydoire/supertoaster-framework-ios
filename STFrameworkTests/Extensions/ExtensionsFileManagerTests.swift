@@ -43,11 +43,33 @@ class ExtensionsFileManagerTests: XCTestCase {
         XCTAssertNotNil(FileManager.url(forPathComponentInCache: "a"))
     }
     
-    func testRemovingFile() {
+    func testRemoveItem() {
         let fileURL = urlForRandomFile()
         XCTAssert(FileManager.fileExists(at: fileURL))
         XCTAssertTrue(FileManager.removeItem(at: fileURL))
         XCTAssertFalse(FileManager.fileExists(at: fileURL))
+    }
+    
+    func testRemoveItems() {
+        let path = "\(Date.timestamp)/a/"
+        guard let dir = FileManager.createDirectoryInDocuments(named: path) else {
+            XCTAssert(false)
+            return
+        }
+        let itemsToKeepCount = 5
+        let itemsToDeleteCount = 2
+        for i in 0..<itemsToKeepCount {
+            createFile(atURL: URL(fileURLWithPath: "\(dir.path)/\(i).txt"))
+        }
+        for i in 0..<itemsToDeleteCount {
+            createFile(atURL: URL(fileURLWithPath: "\(dir.path)/\(i).jpg"))
+        }
+        XCTAssert(FileManager.listFileNames(atPath: dir.path)?.count == itemsToKeepCount + itemsToDeleteCount)
+        // remove all items that finish with .jpg
+        FileManager.removeItems(at: dir) { fileName -> Bool in
+            return fileName.hasSuffix(".jpg")
+        }
+        XCTAssert(FileManager.listFileNames(atPath: dir.path)?.count == itemsToKeepCount)
     }
     
     func testMovingFile() {
@@ -62,15 +84,59 @@ class ExtensionsFileManagerTests: XCTestCase {
         XCTAssertTrue(FileManager.fileExists(at: destinationURL))
     }
     
+    func testReplaceFile() {
+        let fileA = urlForDictFile(withValue: "A")
+        let fileB = urlForDictFile(withValue: "B")
+        XCTAssertTrue(FileManager.replaceItemAt(fileA, withItemAt: fileB))
+        XCTAssertFalse(FileManager.fileExists(at: fileB))
+        XCTAssertTrue(FileManager.fileExists(at: fileA))
+    }
     
-    func urlForRandomFile() -> URL {
-        let url = String.UUIDString().asURLInDocumentDirectory()
-        XCTAssertNotNil(url)
+    func testCreateDirectory() {
+        XCTAssertNotNil(FileManager.createDirectory(at: "\(Date.timestamp)/b/b/c/d".asURLInDocumentDirectory()))
+        XCTAssertNotNil(FileManager.createDirectoryInDocuments(named: "\(Date.timestamp)/a/b/c/d"))
+    }
+    
+    func testListFiles() {
+        let path = "\(Date.timestamp)/a/"
+        guard let dir = FileManager.createDirectoryInDocuments(named: path) else {
+            XCTAssert(false)
+            return
+        }
+        let itemCount = 5
+        for i in 0..<itemCount {
+            createFile(atURL: URL(fileURLWithPath: "\(dir.path)/\(i).txt"))
+        }
+        XCTAssert(FileManager.listFileNames(atPath: dir.path)?.count == itemCount)
+        let urls = FileManager.listFileURLs(atPath: dir.path)
+        XCTAssert(urls?.count == itemCount)
+    }
+    
+    // helpers
+    private func urlForRandomFile() -> URL {
         let dict: [String: Any] = ["a": "a", "b": "b"]
-        guard let saveUrl = url, dict.saveAsPlist(to: saveUrl) else {
+        guard let saveUrl = String.UUIDString().asURLInDocumentDirectory(), dict.saveAsPlist(to: saveUrl) else {
             XCTAssert(false)
             return URL(fileURLWithPath: "")
         }
         return saveUrl
     }
+    
+    private func urlForDictFile(withValue value: String) -> URL {
+        let dict: [String: Any] = ["value": value]
+        guard let saveUrl = String.UUIDString().asURLInDocumentDirectory(), dict.saveAsPlist(to: saveUrl) else {
+            XCTAssert(false)
+            return URL(fileURLWithPath: "")
+        }
+        return saveUrl
+    }
+    
+    private func createFile(atURL url: URL) {
+        let dict: [String: Any] = ["value": "a"]
+        guard dict.saveAsPlist(to: url) else {
+            XCTAssert(false)
+            return
+        }
+    }
+    
 }

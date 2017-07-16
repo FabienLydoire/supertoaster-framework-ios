@@ -102,6 +102,22 @@ extension String {
         }
     }
     
+    // removes the first character of a String
+    public func removeFirstCharacter() -> String {
+        guard self.length > 1 else {
+            return self
+        }
+        return self.substring(with: self.index(self.startIndex, offsetBy: 1)..<self.endIndex)
+    }
+    
+    // removes the last character of a String
+    public func removeLastCharacter() -> String {
+        guard self.length > 1 else {
+            return self
+        }
+        return self.substring(with: self.startIndex..<self.index(self.endIndex, offsetBy: -1))
+    }
+    
     // returns uuid string with format "6E20B04C-11FF-4F1A-A239-BFF5DB17CAE5"
     public static func UUIDString() -> String {
         return NSUUID().uuidString
