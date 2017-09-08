@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A311F73BA136366B2319D42 /* Pods_STFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */; };
 		55CE6AE8DA582633929B67F4 /* Pods_STFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D40E9E73983981C186D299 /* Pods_STFrameworkTests.framework */; };
+		8422EF341F6355ED006350FF /* Numbers+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF331F6355ED006350FF /* Numbers+STFramework.swift */; };
+		8422EF371F6356B2006350FF /* CGSize+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF361F6356B2006350FF /* CGSize+STFramework.swift */; };
+		8422EF391F635779006350FF /* UIToolbar+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF381F635779006350FF /* UIToolbar+STFramework.swift */; };
+		8422EF3C1F6357E0006350FF /* UINavigationController+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF3B1F6357E0006350FF /* UINavigationController+STFramework.swift */; };
+		8422EF3E1F6358CC006350FF /* UINavigationBar+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF3D1F6358CC006350FF /* UINavigationBar+STFramework.swift */; };
+		8422EF401F635E07006350FF /* Bool+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422EF3F1F635E07006350FF /* Bool+STFramework.swift */; };
 		843B922B1EF3E5F900CA58DC /* Random+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */; };
 		844DC4CC1DCCD24F0071B121 /* String+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */; };
 		844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */; };
@@ -70,6 +76,12 @@
 		07ED39B409C3925A7E94AA76 /* Pods-STFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFramework/Pods-STFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		50A0E1A841449F4E32E9CEF5 /* Pods-STFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STFrameworkTests/Pods-STFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72B3BDA293F8B86C63420E7F /* Pods_STFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8422EF331F6355ED006350FF /* Numbers+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numbers+STFramework.swift"; sourceTree = "<group>"; };
+		8422EF361F6356B2006350FF /* CGSize+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+STFramework.swift"; sourceTree = "<group>"; };
+		8422EF381F635779006350FF /* UIToolbar+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+STFramework.swift"; sourceTree = "<group>"; };
+		8422EF3B1F6357E0006350FF /* UINavigationController+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+STFramework.swift"; sourceTree = "<group>"; };
+		8422EF3D1F6358CC006350FF /* UINavigationBar+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+STFramework.swift"; sourceTree = "<group>"; };
+		8422EF3F1F635E07006350FF /* Bool+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+STFramework.swift"; sourceTree = "<group>"; };
 		843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Random+STFramework.swift"; sourceTree = "<group>"; };
 		844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "String+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		844DC4CD1DCCD3650071B121 /* Double+STFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Double+STFramework.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -173,6 +185,7 @@
 				84EB5CE11F16218C000EA7B8 /* CGFloat+STFramework.swift */,
 				84EB5CE31F162244000EA7B8 /* CGPoint+STFramework.swift */,
 				84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */,
+				8422EF361F6356B2006350FF /* CGSize+STFramework.swift */,
 				8457E8981DCCE59900F61021 /* Data+STFramework.swift */,
 				847506D41DCD355900CF8F60 /* Date+STFramework.swift */,
 				847506D21DCD25F200CF8F60 /* DateFormatter+STFramework.swift */,
@@ -188,6 +201,7 @@
 				844DC4DA1DCCD5270071B121 /* NSManagedObject+STFramework.swift */,
 				844DC4DB1DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift */,
 				844DC4DC1DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift */,
+				8422EF331F6355ED006350FF /* Numbers+STFramework.swift */,
 				843B922A1EF3E5F900CA58DC /* Random+STFramework.swift */,
 				844DC4CB1DCCD24F0071B121 /* String+STFramework.swift */,
 				844DC4DE1DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift */,
@@ -199,6 +213,8 @@
 				844DC4E41DCCD5270071B121 /* UIImage+STFramework.swift */,
 				844DC4E51DCCD5270071B121 /* UIImageView+STFramework.swift */,
 				844DC4E61DCCD5270071B121 /* UILabel+STFramework.swift */,
+				8422EF3D1F6358CC006350FF /* UINavigationBar+STFramework.swift */,
+				8422EF3B1F6357E0006350FF /* UINavigationController+STFramework.swift */,
 				844DC4E71DCCD5270071B121 /* UIScreen+STFramework.swift */,
 				844DC4E81DCCD5270071B121 /* UIScrollView+STFramework.swift */,
 				844DC4E91DCCD5270071B121 /* UIStoryBoard+STFramework.swift */,
@@ -206,9 +222,11 @@
 				848395CA1DEB3A9500601F8E /* UITableViewCell+STFramework.swift */,
 				8472E49A1E00271100D56975 /* UITextField+STFramework.swift */,
 				844DC4EC1DCCD5270071B121 /* UITextView+STFramework.swift */,
+				8422EF381F635779006350FF /* UIToolbar+STFramework.swift */,
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
 				8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
+				8422EF3F1F635E07006350FF /* Bool+STFramework.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,11 +480,14 @@
 				844DC4FC1DCCD5270071B121 /* UIDevice+STFramework.swift in Sources */,
 				84EB5CDF1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift in Sources */,
 				844DC4FF1DCCD5270071B121 /* UILabel+STFramework.swift in Sources */,
+				8422EF341F6355ED006350FF /* Numbers+STFramework.swift in Sources */,
 				84DFB1091EF40A4100A0C24B /* Dictionary+STFramework.swift in Sources */,
+				8422EF3E1F6358CC006350FF /* UINavigationBar+STFramework.swift in Sources */,
 				844DC4F51DCCD5270071B121 /* NSMutableAttributedString+STFramework.swift in Sources */,
 				844DC5061DCCD5270071B121 /* UserDefaults+STFramework.swift in Sources */,
 				84EB5CE41F162244000EA7B8 /* CGPoint+STFramework.swift in Sources */,
 				84EB5CDE1F161E7C000EA7B8 /* AVAsset+STFramework.swift in Sources */,
+				8422EF3C1F6357E0006350FF /* UINavigationController+STFramework.swift in Sources */,
 				844DC4F41DCCD5270071B121 /* NSManagedObjectContext+STFramework.swift in Sources */,
 				844DC4F01DCCD5270071B121 /* NSFetchedResultsController+STFramework.swift in Sources */,
 				8472E49F1E002A6300D56975 /* UIViewController+STFramework.swift in Sources */,
@@ -479,7 +500,9 @@
 				844DC5011DCCD5270071B121 /* UIScrollView+STFramework.swift in Sources */,
 				844DC4F91DCCD5270071B121 /* UIButton+STFramework.swift in Sources */,
 				844DC4CF1DCCD3650071B121 /* Double+STFramework.swift in Sources */,
+				8422EF401F635E07006350FF /* Bool+STFramework.swift in Sources */,
 				844DC5031DCCD5270071B121 /* UITableView+STFramework.swift in Sources */,
+				8422EF391F635779006350FF /* UIToolbar+STFramework.swift in Sources */,
 				844DC4FE1DCCD5270071B121 /* UIImageView+STFramework.swift in Sources */,
 				844DC4D01DCCD3650071B121 /* Int+STFramework.swift in Sources */,
 				844DC4EF1DCCD5270071B121 /* NSError+STFramework.swift in Sources */,
@@ -492,6 +515,7 @@
 				844DC4F11DCCD5270071B121 /* NSIndexPath+STFramework.swift in Sources */,
 				844DC4F71DCCD5270071B121 /* UIActivityIndicatorView+STFramework.swift in Sources */,
 				844DC4F81DCCD5270071B121 /* UIBarButtonItem+STFramework.swift in Sources */,
+				8422EF371F6356B2006350FF /* CGSize+STFramework.swift in Sources */,
 				844DC4EE1DCCD5270071B121 /* Array+STFramework.swift in Sources */,
 				843B922B1EF3E5F900CA58DC /* Random+STFramework.swift in Sources */,
 				84C0D5C31DFEDA7100A3F55F /* NotificationCenter+STFramework.swift in Sources */,
