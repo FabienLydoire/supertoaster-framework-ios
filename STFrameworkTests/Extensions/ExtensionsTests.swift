@@ -163,6 +163,18 @@ class ExtensionsTests: XCTestCase {
         XCTAssertTrue(v1.size.width == 10 && v1.size.height == 20)
         v1.size = CGSize(width: 20, height: 10)
         XCTAssertTrue(v1.size.width == 20 && v1.size.height == 10)
+        
+        let v2 = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        let views = [v1, v2]
+        views.hideViews()
+        func hiddenViewsCount() -> Int {
+            return views.reduce(0) { result, view -> Int in
+                return result + (view.isHidden ? 1 : 0)
+            }
+        }
+        XCTAssert(hiddenViewsCount() == 2)
+        views.showViews()
+        XCTAssert(hiddenViewsCount() == 0)
     }
     
     func testDictionary() {
@@ -184,5 +196,39 @@ class ExtensionsTests: XCTestCase {
     func testCGFloat() {
         let value: CGFloat = 0
         XCTAssert(value.easeOut(to: 10, withDamping: 5) == 2)
+        
+        let minusOne: CGFloat = -1
+        let ten: CGFloat = 10
+        XCTAssert(CGFloat.min(minusOne, ten) == -1)
+        XCTAssert(CGFloat.max(minusOne, ten) == 10)
+        XCTAssert(minusOne.abs() == 1)
     }
+    
+    func testNumbers() {
+        let value: Int = 1
+        XCTAssert(value.double == 2)
+    }
+    
+    func testNSLayoutConstraints() {
+        let v = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        var constraints: [NSLayoutConstraint] = []
+        constraints.append(NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 10))
+        constraints.append(NSLayoutConstraint(item: v, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20))
+        func constantTotal() -> CGFloat {
+            return constraints.reduce(0) { result, constraint -> CGFloat in
+                return result + constraint.constant
+            }
+        }
+        XCTAssert(constantTotal() == 30)
+        constraints.updateConstants(withValue: 10)
+        XCTAssert(constantTotal() == 20)
+    }
+    
+    func testBool() {
+        var trueBoolValue = true
+        trueBoolValue.toggle()
+        XCTAssertFalse(trueBoolValue)
+    }
+    
+    
 }

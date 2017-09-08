@@ -35,4 +35,19 @@ extension CGFloat {
     public func easeOut(to: CGFloat, withDamping damping: CGFloat) -> CGFloat {
         return self + ((to - self) / damping)
     }
+    
+    // returns min value of a CGFloat
+    public static func min(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
+        return CGFloat(fminf(Float(a), Float(b)))
+    }
+    
+    // returns max value of a CGFloat
+    public static func max(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
+        return CGFloat(fmaxf(Float(a), Float(b)))
+    }
+    
+    // returns absolute value of a CGFloat
+    public func abs() -> CGFloat {
+        return CGFloat(fabsf(Float(self)))
+    }   
 }

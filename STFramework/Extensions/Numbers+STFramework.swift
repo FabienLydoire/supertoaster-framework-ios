@@ -1,8 +1,8 @@
 //
-//  NSLayoutConstraint+STFramework.swift
+//  Numbers+STFramework.swift
 //  STFramework - Super Toaster Framework
 //
-//  Created by Louis de Decker 
+//  Created by Louis de Decker
 //
 //  MIT License
 //
@@ -15,10 +15,10 @@
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //  copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
-//  
+//
 //  The above copyright notice and this permission notice shall be included in all
 //  copies or substantial portions of the Software.
-//  
+//
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,17 +29,40 @@
 
 import UIKit
 
-extension NSLayoutConstraint {
-    
+extension Int {
+    public var double: Int {
+        return self + self
+    }
+    public var half: Int {
+        return self / 2
+    }
 }
 
-extension Collection where Iterator.Element == NSLayoutConstraint {
-    
-    // change the constant value of all the NSLayoutConstraint contained in an array
-    public func updateConstants(withValue value: CGFloat) {
-        self.forEach { constraint in
-            constraint.constant = value
-        }
+extension Float {
+    public var double: Float {
+        return self + self
     }
-    
+    public var half: Float {
+        return self / 2
+    }
 }
+
+extension Double {
+    public var double: Double {
+        return self + self
+    }
+    public var half: Double {
+        return self / 2
+    }
+}
+
+extension CGFloat {
+    public var double: CGFloat {
+        return self + self
+    }
+    public var half: CGFloat {
+        return self / 2
+    }
+}
+
+

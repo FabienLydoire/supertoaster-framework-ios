@@ -87,6 +87,27 @@ extension UIView {
         }
     }
     
+    // MARK: show/hide
+    // fades in view alpha
+    public func fadeIn(withDuration duration: TimeInterval?) {
+        isHidden = false
+        alpha = 0
+        UIView.animate(withDuration: duration ?? 0.5, animations: {
+            self.alpha = 1
+        })
+    }
+    
+    // fades out view alpha
+    public func fadeOut(withDuration duration: TimeInterval?) {
+        isHidden = false
+        alpha = 1
+        UIView.animate(withDuration: duration ?? 0.5, animations: {
+            self.alpha = 0
+        }) { finished in
+            self.isHidden = true
+        }
+    }    
+    
     // MARK: - NSLayoutConstraint helpers
     // MARK: Size
     public var layoutConstraintSuperview: UIView? {
@@ -202,6 +223,25 @@ extension UIView {
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: superview, attribute: .trailing, multiplier: 1, constant: -paddingValue.right))
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: superview, attribute: .top, multiplier: 1, constant: paddingValue.top))
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: superview, attribute: .bottom, multiplier: 1, constant: -paddingValue.bottom))
+        }
+    }
+    
+}
+
+
+extension Collection where Iterator.Element == UIView {
+    
+    // hides all views contained in an array
+    public func hideViews() {
+        self.forEach { view in
+            view.isHidden = true
+        }
+    }
+    
+    // hides all views contained in an array
+    public func showViews() {
+        self.forEach { view in
+            view.isHidden = false
         }
     }
     
