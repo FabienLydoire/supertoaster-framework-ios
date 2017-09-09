@@ -76,6 +76,24 @@ extension UIView {
         }
     }
     
+    public var bottom: CGFloat {
+        get {
+            return y + height
+        }
+        set {
+            y = newValue - height
+        }
+    }
+    
+    public var right: CGFloat {
+        get {
+            return x + width
+        }
+        set {
+            x = newValue - width
+        }
+    }
+    
     public var size: CGSize {
         get {
             return frame.size
@@ -223,6 +241,31 @@ extension UIView {
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: superview, attribute: .trailing, multiplier: 1, constant: -paddingValue.right))
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: superview, attribute: .top, multiplier: 1, constant: paddingValue.top))
             superview.addConstraint(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: superview, attribute: .bottom, multiplier: 1, constant: -paddingValue.bottom))
+        }
+    }
+    
+    // adds NSLayoutConstraints with the same attribute for both target view and superView
+    public func layoutConstraintAddEqualAttributesToSuperView(_ attributes: NSLayoutAttribute...) {
+        if let superview = layoutConstraintSuperview {
+            attributes.forEach({ attribute in
+                superview.addConstraint(NSLayoutConstraint(item: self, attribute: attribute, relatedBy: .equal, toItem: superview, attribute: attribute, multiplier: 1, constant: 0))
+            })
+        }
+    }
+    
+    // adds NSLayoutConstraints with the same attribute and constant for both target view and superView
+    public func layoutConstraintAddEqualAttributesToSuperView(_ attributes: (NSLayoutAttribute, CGFloat)...) {
+        if let superview = layoutConstraintSuperview {
+            attributes.forEach({ attribute in
+                superview.addConstraint(NSLayoutConstraint(item: self, attribute: attribute.0, relatedBy: .equal, toItem: superview, attribute: attribute.0, multiplier: 1, constant: attribute.1))
+            })
+        }
+    }
+    
+    // removes all constraints on a given view
+    public func removeConstraints() {
+        constraints.forEach { constraint in
+            self.removeConstraint(constraint)
         }
     }
     

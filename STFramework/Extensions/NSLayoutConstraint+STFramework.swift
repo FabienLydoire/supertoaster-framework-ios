@@ -35,10 +35,17 @@ extension NSLayoutConstraint {
 
 extension Collection where Iterator.Element == NSLayoutConstraint {
     
-    // change the constant value of all the NSLayoutConstraint contained in an array
+    // changes the constant value of all the NSLayoutConstraint contained in an array
     public func updateConstants(withValue value: CGFloat) {
         self.forEach { constraint in
             constraint.constant = value
+        }
+    }
+    
+    // changes .active property of all the NSLayoutConstraint contained in an array
+    public func updateIsActive(_ isActive: Bool) {
+        self.forEach { constraint in
+            constraint.isActive = isActive
         }
     }
     

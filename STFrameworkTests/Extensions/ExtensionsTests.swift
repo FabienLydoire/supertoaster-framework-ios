@@ -175,6 +175,46 @@ class ExtensionsTests: XCTestCase {
         XCTAssert(hiddenViewsCount() == 2)
         views.showViews()
         XCTAssert(hiddenViewsCount() == 0)
+        
+        let v3 = UIView(frame: CGRect(x: 10, y: 10, width: 100, height: 50))
+        // testing .bottom
+        XCTAssert(v3.bottom == 60)
+        v3.bottom = 100
+        XCTAssert(v3.bottom == 100 && v3.y == 50)
+        // testing .right
+        XCTAssert(v3.right == 110)
+        v3.right = 100
+        XCTAssert(v3.right == 100 && v3.x == 0)
+
+
+    }
+    
+    func testUIViewLayoutConstraints() {
+        
+        let superView = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superView.addSubview(view)
+        
+        // adding equal constraints
+        view.layoutConstraintAddEqualAttributesToSuperView(.top, .left)
+        XCTAssert(superView.constraints.count == 2)
+
+        // removing all constraints
+        superView.removeConstraints()
+        XCTAssert(superView.constraints.count == 0)
+
+        // adding equal constraints + constants
+        view.layoutConstraintAddEqualAttributesToSuperView((.top, 10), (.leading, 0))
+        XCTAssert(superView.constraints.count == 2)
+        view.constraints.forEach { constraint in
+            if constraint.firstAttribute == .top {
+                XCTAssert(constraint.constant == 10)
+            } else if constraint.firstAttribute == .leading {
+                XCTAssert(constraint.constant == 0)
+            }
+        }
+        
+        
     }
     
     func testDictionary() {
@@ -212,8 +252,14 @@ class ExtensionsTests: XCTestCase {
     func testNSLayoutConstraints() {
         let v = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
         var constraints: [NSLayoutConstraint] = []
-        constraints.append(NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 10))
-        constraints.append(NSLayoutConstraint(item: v, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20))
+        let c1 = NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 10)
+        c1.isActive = true
+        constraints.append(c1)
+        let c2 = NSLayoutConstraint(item: v, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20)
+        c2.isActive = true
+        constraints.append(c2)
+        
+        // test updating the constants of all the constraints
         func constantTotal() -> CGFloat {
             return constraints.reduce(0) { result, constraint -> CGFloat in
                 return result + constraint.constant
@@ -222,6 +268,17 @@ class ExtensionsTests: XCTestCase {
         XCTAssert(constantTotal() == 30)
         constraints.updateConstants(withValue: 10)
         XCTAssert(constantTotal() == 20)
+        
+        // test .isActive
+        func isActiveTotal() -> Int {
+            return constraints.reduce(0) { result, constraint -> Int in
+                return result + Int(constraint.isActive ? 1 : 0)
+            }
+        }
+        XCTAssert(isActiveTotal() == 2)
+        constraints.updateIsActive(false)
+        XCTAssert(isActiveTotal() == 0)
+
     }
     
     func testBool() {
