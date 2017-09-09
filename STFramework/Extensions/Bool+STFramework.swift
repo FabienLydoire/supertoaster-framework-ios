@@ -37,3 +37,17 @@ extension Bool {
     }
     
 }
+
+extension Collection where Iterator.Element == Bool {
+    
+    // checks if all Bool items of an array are true
+    public func isTrue() -> Bool {
+        return self.reduce(true, { result, value -> Bool in
+            if !value || !result {
+                return false
+            }
+            return true
+        })
+    }
+    
+}

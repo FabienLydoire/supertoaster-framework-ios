@@ -285,6 +285,12 @@ class ExtensionsTests: XCTestCase {
         var trueBoolValue = true
         trueBoolValue.toggle()
         XCTAssertFalse(trueBoolValue)
+        
+        //
+        let a: [Bool] = [true, true, true]
+        XCTAssertTrue(a.isTrue())
+         let b: [Bool] = [true, true, false]
+        XCTAssertFalse(b.isTrue())
     }
     
     

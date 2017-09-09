@@ -182,6 +182,7 @@
 				844DC4D51DCCD5270071B121 /* Array+STFramework.swift */,
 				84EB5CDC1F161E7C000EA7B8 /* AVAsset+STFramework.swift */,
 				84EB5CDD1F161E7C000EA7B8 /* AVAssetExportSession+STFramework.swift */,
+				8422EF3F1F635E07006350FF /* Bool+STFramework.swift */,
 				84EB5CE11F16218C000EA7B8 /* CGFloat+STFramework.swift */,
 				84EB5CE31F162244000EA7B8 /* CGPoint+STFramework.swift */,
 				84FE44D81F126DE500D699F8 /* CGRect+STFramework.swift */,
@@ -226,7 +227,6 @@
 				844DC4D11DCCD3750071B121 /* UIView+STFramework.swift */,
 				8472E49E1E002A6300D56975 /* UIViewController+STFramework.swift */,
 				844DC4ED1DCCD5270071B121 /* UserDefaults+STFramework.swift */,
-				8422EF3F1F635E07006350FF /* Bool+STFramework.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
