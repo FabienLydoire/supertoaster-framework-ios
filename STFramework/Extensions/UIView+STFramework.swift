@@ -110,7 +110,7 @@ extension UIView {
     public func fadeIn(withDuration duration: TimeInterval?) {
         isHidden = false
         alpha = 0
-        UIView.animate(withDuration: duration ?? 0.5, animations: {
+        UIView.animate(withDuration: duration ?? 0.25, animations: {
             self.alpha = 1
         })
     }
@@ -119,7 +119,7 @@ extension UIView {
     public func fadeOut(withDuration duration: TimeInterval?) {
         isHidden = false
         alpha = 1
-        UIView.animate(withDuration: duration ?? 0.5, animations: {
+        UIView.animate(withDuration: duration ?? 0.25, animations: {
             self.alpha = 0
         }) { finished in
             self.isHidden = true

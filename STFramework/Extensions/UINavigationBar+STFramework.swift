@@ -36,6 +36,7 @@ extension UINavigationBar {
         setBackgroundImage(UIImage(), for: .default)        
         backgroundColor = .clear
         isTranslucent = true
+        shadowImage = UIImage()
     }
     
 }
