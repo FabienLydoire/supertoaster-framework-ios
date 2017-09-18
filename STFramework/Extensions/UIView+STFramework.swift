@@ -269,8 +269,69 @@ extension UIView {
         }
     }
     
+    // distributes views horizontally in current view. [views] must already have a width/height constraint
+    public func distribute(viewsHorizontally views: [UIView], withPadding padding: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
+        enum DistributedViewType {
+            case view(UIView), spacer(UIView)
+        }
+        func newSpacer() -> DistributedViewType {
+            let spacer = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+            spacer.backgroundColor = .clear
+            addSubview(spacer)
+            return .spacer(spacer)
+        }
+        
+        var distributedViews: [DistributedViewType] = []
+        distributedViews.append(newSpacer())
+        views.forEach { view in
+            distributedViews.append(.view(view))
+            addSubview(view)
+            distributedViews.append(newSpacer())
+        }
+        let firstViewItem = views[0]
+        var firstSpacer: UIView? = nil
+        var firstView: UIView? = nil
+        var previousView: UIView? = nil
+        for i in 0..<distributedViews.count {
+            let distributedView = distributedViews[i]
+            let currentView: UIView
+            switch distributedView {
+            case .spacer(let spacer):
+                currentView = spacer
+                if let firstSpacer = firstSpacer {
+                    // all other spacers have same width as first spacer
+                    addConstraint(NSLayoutConstraint(item: spacer, attribute: .width, relatedBy: .equal, toItem: firstSpacer, attribute: .width, multiplier: 1, constant: 0))
+                } else {
+                    // first spacer, do nothing
+                    firstSpacer = spacer
+                }
+                addConstraint(NSLayoutConstraint(item: currentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1))
+            case .view(let view):
+                currentView = view
+                if firstView == nil {
+                    firstView = view
+                    addConstraint(NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: padding.top))
+                }
+            }
+            currentView.translatesAutoresizingMaskIntoConstraints = false
+            addConstraint(NSLayoutConstraint(item: currentView, attribute: .top, relatedBy: .equal, toItem: firstViewItem, attribute: .top, multiplier: 1, constant: 0))
+            if let previousView = previousView {
+                // all currentView's .leading snaps to the previousView's .trailing
+                addConstraint(NSLayoutConstraint(item: currentView, attribute: .leading, relatedBy: .equal, toItem: previousView, attribute: .trailing, multiplier: 1, constant: 0))
+                if i >= distributedViews.count - 1 {
+                    // lase view, align trailing to current view's trailing
+                    addConstraint(NSLayoutConstraint(item: currentView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -padding.right))
+                }
+            } else {
+                // first view, align leading to current view's leading
+                addConstraint(NSLayoutConstraint(item: currentView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: padding.left))
+            }
+            previousView = currentView
+        }
+    }
+    
+    
 }
-
 
 extension Collection where Iterator.Element == UIView {
     
@@ -289,3 +350,4 @@ extension Collection where Iterator.Element == UIView {
     }
     
 }
+
