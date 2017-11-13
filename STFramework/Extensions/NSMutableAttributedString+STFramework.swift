@@ -36,7 +36,7 @@ extension NSMutableAttributedString {
         paragraphStyle.alignment = textAlignment
         paragraphStyle.lineSpacing = lineSpacing
         let attributedString = NSMutableAttributedString(string: string)
-        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle, NSBaselineOffsetAttributeName: -paddingTop], range: NSMakeRange(0, string.characters.count))
+        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle, NSBaselineOffsetAttributeName: -paddingTop], range: NSMakeRange(0, string.count))
         return attributedString
     }
         
@@ -44,7 +44,7 @@ extension NSMutableAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         let attributedString = NSMutableAttributedString(string: string)
-        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle], range: NSMakeRange(0, string.characters.count))
+        attributedString.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: paragraphStyle], range: NSMakeRange(0, string.count))
         return attributedString
     }
     

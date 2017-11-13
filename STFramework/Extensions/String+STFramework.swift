@@ -65,7 +65,7 @@ extension String {
     
     // if string is not empty, returns string
     public static func stringIfNotEmpty(_ string:String?) -> String? {
-        if let string = string, string.characters.count > 0 {
+        if let string = string, string.count > 0 {
             return string
         } else {
             return nil
@@ -91,14 +91,14 @@ extension String {
     }
     
     public var length: Int {        
-        return self.characters.count
+        return self.count
     }
     
     public func substringAt(index: Int) -> String? {
         if index < 0 || index >= self.length {
             return nil
         } else {
-            return String(self.characters[self.index(self.startIndex, offsetBy: index)])
+            return String(self[self.index(self.startIndex, offsetBy: index)])
         }
     }
     
